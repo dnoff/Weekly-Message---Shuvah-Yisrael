@@ -1,0 +1,18 @@
+{
+  "name": "weekly-message-qr",
+  "version": "1.0.0",
+  "description": "Generate a weekly message page and QR code for synagogue / community outlines",
+  "type": "module",
+  "scripts": {
+    "new": "node scripts/new-week.js",
+    "build": "node scripts/build.js",
+    "preview": "npx --yes serve dist -p 4173"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "marked": "^15.0.12",
+    "qrcode": "^1.5.4"
+  }
+}

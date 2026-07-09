@@ -1,0 +1,12 @@
+{
+  "siteName": "Weekly Message",
+  "subtitle": "Message & outline for the week",
+  "publicUrl": "https://dnoff.github.io/Weekly-Message---Shuvah-Yisrael/",
+  "authorLabel": "From the Rabbi",
+  "qr": {
+    "width": 512,
+    "margin": 2,
+    "dark": "#1a2332",
+    "light": "#ffffff"
+  }
+}
