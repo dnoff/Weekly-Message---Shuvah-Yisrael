@@ -61,7 +61,7 @@ Your message and outline in normal Markdown…
 
 1. Create a GitHub repo and push this project.
 2. Set `publicUrl` in `config.json` to `https://YOUR-USERNAME.github.io/REPO-NAME/`.
-3. In the repo: **Settings → Pages → Deploy from a branch** → choose `gh-pages`, or use the included GitHub Action.
+3. In the repo: **Settings → Pages → Source: GitHub Actions**.
 4. Run `npm run build`, commit, and push (or let the Action build on push).
 5. Print `dist/qr/this-week.png` once; reuse it every week after you publish updates.
 
