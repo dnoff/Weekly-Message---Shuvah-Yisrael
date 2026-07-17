@@ -6,7 +6,7 @@
   "scripts": {
     "new": "node scripts/new-week.js",
     "build": "node scripts/build.js",
-    "preview": "npx --yes serve dist -p 4173"
+    "preview": "npx --yes serve docs -p 4173"
   },
   "engines": {
     "node": ">=18"
