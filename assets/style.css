@@ -167,6 +167,22 @@ body {
   background: #e8eeeb;
 }
 
+.content blockquote {
+  margin: 1.25rem 0;
+  padding: 0.85rem 1rem;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+.content blockquote p {
+  margin: 0;
+}
+
+.content h3 {
+  color: var(--ink);
+}
+
 .nav {
   display: flex;
   flex-wrap: wrap;
