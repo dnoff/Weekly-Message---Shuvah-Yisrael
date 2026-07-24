@@ -41,20 +41,44 @@ function parseFrontMatter(raw) {
   return { meta, body };
 }
 
-// Roman-numeral and lettered headings get a marker badge so the outline
-// hierarchy is readable at a glance on a phone.
+// Roman-numeral headings become jump targets and generate a compact legend.
+// Lettered headings get a smaller badge to preserve the outline hierarchy.
 function markOutlineHeadings(html) {
-  return html
+  const sections = [];
+  let markedHtml = html
     .replace(
       /<h3>([IVXLCDM]+)\.\s+([\s\S]*?)<\/h3>/g,
-      (_m, numeral, rest) =>
-        `<h3 class="outline-point"><span class="outline-marker">${numeral}</span><span>${rest}</span></h3>`
+      (_m, numeral, rest) => {
+        const id = `outline-${numeral.toLowerCase()}`;
+        sections.push({ numeral, id, title: rest });
+        return `<h3 id="${id}" class="outline-point"><span class="outline-marker">${numeral}</span><span>${rest}</span></h3>`;
+      }
     )
     .replace(
       /<h4>([A-Z])\.\s+([\s\S]*?)<\/h4>/g,
       (_m, letter, rest) =>
         `<h4 class="outline-sub"><span class="outline-letter">${letter}</span><span>${rest}</span></h4>`
     );
+
+  if (sections.length === 0) {
+    return markedHtml;
+  }
+
+  const links = sections
+    .map(
+      ({ numeral, id, title }) =>
+        `<a href="#${id}"><span>${numeral}</span>${title}</a>`
+    )
+    .join("");
+  const legend = `<nav class="outline-legend" aria-label="Message outline">
+    <p>Jump to a section</p>
+    <div>${links}</div>
+  </nav>`;
+
+  return markedHtml.replace(
+    /<h3 id="outline-/,
+    `${legend}<h3 id="outline-`
+  );
 }
 
 function listWeeks() {

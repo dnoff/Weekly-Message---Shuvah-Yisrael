@@ -156,12 +156,59 @@ body {
   font-size: 1rem;
 }
 
+.outline-legend {
+  margin: 1.75rem 0 2rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.outline-legend p {
+  margin: 0 0 0.7rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.outline-legend div {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.content .outline-legend a {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 0.65rem;
+  color: var(--ink);
+  text-decoration: none;
+  background: var(--accent-soft);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.content .outline-legend a:hover {
+  background: color-mix(in srgb, var(--accent-soft) 72%, white);
+  transform: translateX(2px);
+}
+
+.outline-legend a span {
+  flex: none;
+  min-width: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  background: var(--accent);
+}
+
 .content .outline-point {
   display: flex;
   align-items: center;
   gap: 0.8rem;
   margin: 2.5rem 0 1rem;
   padding-top: 1.1rem;
+  scroll-margin-top: 1rem;
   border-top: 2px solid var(--accent-soft);
   font-family: var(--font-display);
   font-size: 1.25rem;
@@ -365,7 +412,10 @@ body {
 <p><strong>1 John 2:1</strong><br>1 My little children, I am writing these things to you so that you may not sin. And if anyone sins, we have an Advocate with the Father, Yeshua Messiah the righteous;</p>
 <p><strong>Hebrews 7:25</strong><br>25 Therefore He is able also to save forever those who draw near to God through Him, since He always lives to make intercession for them.</p>
 <p><strong>Hebrews 9:24</strong><br>24 For Messiah did not enter a holy place made with hands, a mere copy of the true one, but into heaven itself, now to appear in the presence of God for us;</p>
-<h3 class="outline-point"><span class="outline-marker">I</span><span>Yeshua prays for His own ultimate glorification</span></h3>
+<nav class="outline-legend" aria-label="Message outline">
+    <p>Jump to a section</p>
+    <div><a href="#outline-i"><span>I</span>Yeshua prays for His own ultimate glorification</a><a href="#outline-ii"><span>II</span>Yeshua prays for His disciples&#39; protection and sanctification</a><a href="#outline-iii"><span>III</span>Yeshua prays for His believers&#39; unity and glorification</a></div>
+  </nav><h3 id="outline-i" class="outline-point"><span class="outline-marker">I</span><span>Yeshua prays for His own ultimate glorification</span></h3>
 <h4 class="outline-sub"><span class="outline-letter">A</span><span>Through His authority</span></h4>
 <p><strong>John 17:1</strong><br>1 Yeshua spoke these things; and lifting up His eyes to heaven, He said, “Father, the hour has come; glorify Your Son, that the Son may glorify You,</p>
 <p><strong>John 17:2–3</strong><br>2 even as You gave Him authority over all flesh, that to all whom You have given Him, He may give eternal life. 3 This is eternal life, that they may know You, the only true God, and Yeshua Messiah whom You have sent.</p>
@@ -378,7 +428,7 @@ body {
 <p><strong>John 17:4</strong><br>4 I glorified You on the earth, having accomplished the work which You have given Me to do.</p>
 <p><strong>John 17:5</strong><br>5 Now, Father, glorify Me together with Yourself, with the glory which I had with You before the world was.</p>
 <p><strong>Philippians 2:5–11</strong><br>5 Have this attitude in yourselves which was also in Messiah Yeshua, 6 who, although He existed in the form of God, did not regard equality with God a thing to be grasped, 7 but emptied Himself, taking the form of a bond-servant, and being made in the likeness of men. 8 Being found in appearance as a man, He humbled Himself by becoming obedient to the point of death, even death on a cross. 9 For this reason also, God highly exalted Him, and bestowed on Him the name which is above every name, 10 so that at the name of Yeshua every knee will bow, of those who are in heaven and on earth and under the earth, 11 and that every tongue will confess that Yeshua Messiah is Lord, to the glory of God the Father.</p>
-<h3 class="outline-point"><span class="outline-marker">II</span><span>Yeshua prays for His disciples&#39; protection and sanctification</span></h3>
+<h3 id="outline-ii" class="outline-point"><span class="outline-marker">II</span><span>Yeshua prays for His disciples&#39; protection and sanctification</span></h3>
 <h4 class="outline-sub"><span class="outline-letter">A</span><span>For the disciples&#39; protection and joy</span></h4>
 <p><strong>John 17:6</strong><br>6 “I have manifested Your name to the men whom You gave Me out of the world; they were Yours and You gave them to Me, and they have kept Your word.</p>
 <p><strong>Luke 6:12–16</strong><br>12 It was at this time that He went off to the mountain to pray, and He spent the whole night in prayer to God. 13 And when day came, He called His disciples to Him and chose twelve of them, whom He also named as apostles: 14 Simon, whom He also named Peter, and Andrew his brother; and Jacob and John; and Philip and Bartholomew; 15 and Matthew and Thomas; James the son of Alphaeus, and Simon who was called the Zealot; 16 Judas the son of Jacob, and Judas Iscariot, who became a traitor.</p>
@@ -402,7 +452,7 @@ body {
 <p><strong>Matthew 28:18–20</strong><br>18 And Yeshua came up and spoke to them, saying, “All authority has been given to Me in heaven and on earth. 19 Go therefore and make disciples of all the nations, immersing them in the name of the Father and the Son and the Holy Spirit, 20 teaching them to observe all that I commanded you; and lo, I am with you always, even to the end of the age.”</p>
 <p><strong>2 Corinthians 5:18–20</strong><br>18 Now all these things are from God, who reconciled us to Himself through Messiah and gave us the ministry of reconciliation, 19 namely, that God was in Messiah reconciling the world to Himself, not counting their trespasses against them, and He has committed to us the word of reconciliation. 20 Therefore, we are ambassadors for Messiah, as though God were making an appeal through us; we beg you on behalf of Messiah, be reconciled to God.</p>
 <p><strong>John 17:19</strong><br>19 For their sakes I sanctify Myself, that they themselves also may be sanctified in truth.</p>
-<h3 class="outline-point"><span class="outline-marker">III</span><span>Yeshua prays for His believers&#39; unity and glorification</span></h3>
+<h3 id="outline-iii" class="outline-point"><span class="outline-marker">III</span><span>Yeshua prays for His believers&#39; unity and glorification</span></h3>
 <h4 class="outline-sub"><span class="outline-letter">A</span><span>For the believers&#39; unity</span></h4>
 <p><strong>John 17:20–21</strong><br>20 “I do not ask on behalf of these alone, but for those also who believe in Me through their word; 21 that they may all be one; even as You, Father, are in Me and I in You, that they also may be in Us, so that the world may believe that You sent Me.</p>
 <p><strong>1 Corinthians 12:12–13</strong><br>12 For even as the body is one and yet has many members, and all the members of the body, though they are many, are one body, so also is Messiah. 13 For by one Spirit we were all immersed into one body, whether Jews or Greeks, whether slaves or free, and we were all made to drink of one Spirit.</p>
