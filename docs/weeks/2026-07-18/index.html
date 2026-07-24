@@ -151,6 +151,60 @@ body {
   font-size: 1.05rem;
 }
 
+.content h4 {
+  margin: 1.35rem 0 0.5rem;
+  font-size: 1rem;
+}
+
+.content .outline-point {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 2.5rem 0 1rem;
+  padding-top: 1.1rem;
+  border-top: 2px solid var(--accent-soft);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.outline-marker {
+  flex: none;
+  min-width: 2.6rem;
+  padding: 0.3rem 0.55rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #fff;
+  background: var(--accent);
+}
+
+.content .outline-sub {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 1.75rem 0 0.75rem;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.outline-letter {
+  flex: none;
+  min-width: 1.9rem;
+  padding: 0.22rem 0.45rem;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--accent);
+  background: var(--accent-soft);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+
 .content p,
 .content li {
   color: var(--ink);
@@ -306,7 +360,7 @@ body {
 <h2>Message Outline</h2>
 <p><em>Tisha B&#39;Av — A Time to Mourn</em><br>Rabbi Larry Feldman</p>
 <p><strong>Save us O Lord</strong><br>Like days of long ago<br>Save us O Lord<br>Deliver us once more<br>Save us O Lord<br>Shine Your face on us<br>And let Your mercies flow<br>Save us O Lord<br>To You our hearts restore</p>
-<h3>I. Historical events on this day</h3>
+<h3 class="outline-point"><span class="outline-marker">I</span><span>Historical events on this day</span></h3>
 <ul>
 <li>Moses broke the tablets  </li>
 <li>Israel denied entrance  </li>
@@ -321,7 +375,7 @@ body {
 <li>Treblinka  </li>
 <li>Buenos Aires bombing</li>
 </ul>
-<h3>II. Traditional observances on this day</h3>
+<h3 class="outline-point"><span class="outline-marker">II</span><span>Traditional observances on this day</span></h3>
 <ul>
 <li>Fasting  </li>
 <li>No bathing  </li>
@@ -331,33 +385,33 @@ body {
 <li>No Torah  </li>
 <li>Read Lamentations, Job, Jeremiah, and Leviticus</li>
 </ul>
-<h3>III. Israel&#39;s First Temple destroyed</h3>
+<h3 class="outline-point"><span class="outline-marker">III</span><span>Israel&#39;s First Temple destroyed</span></h3>
 <p><strong>Why did God allow it? What does it teach us?</strong></p>
-<h4>A. The attitude of the people</h4>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>The attitude of the people</span></h4>
 <p><strong>Jeremiah 7:1–2</strong><br>The word that came to Jeremiah from the Lord, saying, “Stand in the gate of the Lord’s house and proclaim there this word and say, ‘Hear the word of the Lord, all you of Judah, who enter by these gates to worship the Lord!’”</p>
 <p><strong>Jeremiah 7:3–5</strong><br>Thus says the Lord of hosts, the God of Israel, “Amend your ways and your deeds, and I will let you dwell in this place. Do not trust in deceptive words, saying, ‘This is the temple of the Lord, the temple of the Lord, the temple of the Lord.’ For if you truly amend your ways and your deeds, if you truly practice justice between a man and his neighbor,”</p>
 <p><strong>Jeremiah 7:6–8</strong><br>“if you do not oppress the alien, the orphan, or the widow, and do not shed innocent blood in this place, nor walk after other gods to your own ruin, then I will let you dwell in this place, in the land that I gave to your fathers forever and ever. Behold, you are trusting in deceptive words to no avail.”</p>
 <p><strong>Jeremiah 7:9–10</strong><br>“Will you steal, murder, and commit adultery and swear falsely, and offer sacrifices to Baal and walk after other gods that you have not known, then come and stand before Me in this house, which is called by My name, and say, ‘We are delivered!’—that you may do all these abominations?”</p>
 <p><strong>Jeremiah 7:11, 14</strong><br>“Has this house, which is called by My name, become a den of robbers in your sight? Behold, I, even I, have seen it,” declares the Lord. “therefore, I will do to the house which is called by My name, in which you trust, and to the place which I gave you and your fathers, as I did to Shiloh.”</p>
 <p><strong>Jeremiah 7:15</strong><br>“I will cast you out of My sight, as I have cast out all your brothers, all the offspring of Ephraim.”</p>
-<h4>B. The destruction of the Temple</h4>
+<h4 class="outline-sub"><span class="outline-letter">B</span><span>The destruction of the Temple</span></h4>
 <p><strong>Jeremiah 39:4–9</strong> — Zedekiah flees, is captured, and Jerusalem is burned; the people are carried into exile in Babylon.</p>
 <p><strong>Jeremiah 44:2–3</strong><br>“Thus says the Lord of hosts, the God of Israel, ‘You yourselves have seen all the calamity that I have brought on Jerusalem and all the cities of Judah; and behold, this day they are in ruins and no one lives in them, because of their wickedness which they committed so as to provoke Me to anger by continuing to burn sacrifices and to serve other gods whom they had not known, neither they, you, nor your fathers.’”</p>
-<h4>C. The reason for the discipline</h4>
+<h4 class="outline-sub"><span class="outline-letter">C</span><span>The reason for the discipline</span></h4>
 <p><strong>Jeremiah 44:4–6</strong><br>Yet I sent you all My servants the prophets, again and again, saying, “Oh, do not do this abominable thing which I hate.” But they did not listen or incline their ears to turn from their wickedness, so as not to burn sacrifices to other gods. Therefore My wrath and My anger were poured out and burned in the cities of Judah and in the streets of Jerusalem, so they have become a ruin and a desolation as it is this day.</p>
-<h4>D. The lesson to be learned</h4>
+<h4 class="outline-sub"><span class="outline-letter">D</span><span>The lesson to be learned</span></h4>
 <p><strong>Jeremiah 9:23–24</strong><br>Thus says the Lord, “Let not a wise man boast of his wisdom, and let not the mighty man boast of his might, let not a rich man boast of his riches; but let him who boasts boast of this, that he understands and knows Me, that I am the Lord who exercises lovingkindness, justice and righteousness on earth; for I delight in these things,” declares the Lord.</p>
 <blockquote>
 <p><strong>Don’t trust in anything but God alone.</strong></p>
 </blockquote>
-<h3>IV. Israel&#39;s Second Temple destroyed</h3>
-<h4>A. God disciplined His people</h4>
+<h3 class="outline-point"><span class="outline-marker">IV</span><span>Israel&#39;s Second Temple destroyed</span></h3>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>God disciplined His people</span></h4>
 <ul>
 <li>Rabbis say: for Israel’s sins  </li>
 <li>Believers say: for one sin</li>
 </ul>
 <p><strong>Luke 19:41–44</strong><br>When He approached Jerusalem, He saw the city and wept over it, saying, “If you had known in this day, even you, the things which make for peace! But now they have been hidden from your eyes. For the days will come upon you when your enemies will throw up a barricade against you, and surround you and hem you in on every side, and they will level you to the ground and your children within you, and they will not leave in you one stone upon another, because you did not recognize the time of your visitation.”</p>
-<h4>B. It teaches about God’s sacrifices</h4>
+<h4 class="outline-sub"><span class="outline-letter">B</span><span>It teaches about God’s sacrifices</span></h4>
 <ul>
 <li>Old sacrifices were inadequate  </li>
 <li>Sacrifices are over  </li>

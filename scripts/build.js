@@ -41,6 +41,22 @@ function parseFrontMatter(raw) {
   return { meta, body };
 }
 
+// Roman-numeral and lettered headings get a marker badge so the outline
+// hierarchy is readable at a glance on a phone.
+function markOutlineHeadings(html) {
+  return html
+    .replace(
+      /<h3>([IVXLCDM]+)\.\s+([\s\S]*?)<\/h3>/g,
+      (_m, numeral, rest) =>
+        `<h3 class="outline-point"><span class="outline-marker">${numeral}</span><span>${rest}</span></h3>`
+    )
+    .replace(
+      /<h4>([A-Z])\.\s+([\s\S]*?)<\/h4>/g,
+      (_m, letter, rest) =>
+        `<h4 class="outline-sub"><span class="outline-letter">${letter}</span><span>${rest}</span></h4>`
+    );
+}
+
 function listWeeks() {
   return fs
     .readdirSync(weeksDir)
@@ -55,7 +71,7 @@ function listWeeks() {
         title: meta.title || "Weekly Message",
         weekOf: meta.weekOf || date,
         body,
-        html: marked.parse(body),
+        html: markOutlineHeadings(marked.parse(body)),
       };
     })
     .sort((a, b) => b.date.localeCompare(a.date));
