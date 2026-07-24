@@ -195,20 +195,32 @@ body {
 .nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 2.25rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--line);
+  gap: 0.75rem;
   font-weight: 600;
+}
+
+.nav-top {
+  margin: 0 0 1.25rem;
+  padding: 0 0 1rem;
+  border-bottom: 1px solid var(--line);
 }
 
 .nav a {
   color: var(--accent);
   text-decoration: none;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--line);
+  background: #fff;
 }
 
 .nav a:hover {
-  text-decoration: underline;
+  border-color: var(--accent);
+}
+
+.nav a.nav-current {
+  color: var(--ink);
+  border-color: var(--accent);
+  background: var(--accent-soft);
 }
 
 .week-list {
@@ -260,6 +272,10 @@ body {
 <body>
   <div class="bg" aria-hidden="true"></div>
   <main class="sheet">
+    <nav class="nav nav-top">
+      <a href="../">This week</a>
+      <a href="./" class="nav-current">Past weeks</a>
+    </nav>
     <header class="top">
       <p class="brand">Shuvah Yisrael</p>
       <h1>Past weeks</h1>
@@ -277,7 +293,6 @@ body {
         <span class="week-date">July 18, 2026 · 4 Av 5786</span>
       </a>
     </li></ul>
-    <nav class="nav"><a href="../">Back to this week</a></nav>
   </main>
 </body>
 </html>

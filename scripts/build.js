@@ -97,6 +97,7 @@ function pageShell({ config, title, weekOf, contentHtml, navHtml, isLatest }) {
 <body>
   <div class="bg" aria-hidden="true"></div>
   <main class="sheet">
+    ${navHtml}
     <header class="top">
       <p class="brand">${escapeHtml(config.siteName)}</p>
       ${badge}
@@ -106,7 +107,6 @@ function pageShell({ config, title, weekOf, contentHtml, navHtml, isLatest }) {
     <article class="content">
       ${contentHtml}
     </article>
-    ${navHtml}
   </main>
 </body>
 </html>`;
@@ -160,7 +160,10 @@ async function build() {
     weekOf: latest.weekOf,
     contentHtml: latest.html,
     navHtml: weeks.length > 1
-      ? `<nav class="nav"><a href="weeks/">Past weeks</a></nav>`
+      ? `<nav class="nav nav-top">
+          <a href="./" class="nav-current">This week</a>
+          <a href="weeks/">Past weeks</a>
+        </nav>`
       : "",
     isLatest: true,
   });
@@ -174,7 +177,7 @@ async function build() {
       title: week.title,
       weekOf: week.weekOf,
       contentHtml: week.html,
-      navHtml: `<nav class="nav">
+      navHtml: `<nav class="nav nav-top">
         <a href="../">This week</a>
         <a href="./">Past weeks</a>
       </nav>`,
@@ -211,13 +214,16 @@ async function build() {
 <body>
   <div class="bg" aria-hidden="true"></div>
   <main class="sheet">
+    <nav class="nav nav-top">
+      <a href="../">This week</a>
+      <a href="./" class="nav-current">Past weeks</a>
+    </nav>
     <header class="top">
       <p class="brand">${escapeHtml(config.siteName)}</p>
       <h1>Past weeks</h1>
       <p class="meta">${escapeHtml(config.subtitle)}</p>
     </header>
     <ul class="week-list">${archiveItems}</ul>
-    <nav class="nav"><a href="../">Back to this week</a></nav>
   </main>
 </body>
 </html>`;
