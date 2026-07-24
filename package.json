@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "new": "node scripts/new-week.js",
-    "build": "node scripts/build.js",
+    "build": "node scripts/build.js && python scripts/make_slide.py",
     "preview": "npx --yes serve docs -p 4173"
   },
   "engines": {

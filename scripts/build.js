@@ -229,6 +229,7 @@ async function build() {
   console.log(`Site:      docs/index.html`);
   console.log(`QR target: ${qrUrl}`);
   console.log(`Print:     docs/qr/weekly.png`);
+  console.log(`(Slide will be generated next…)`);
 }
 
 build().catch((err) => {
