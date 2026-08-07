@@ -94,6 +94,7 @@ function listWeeks() {
         date,
         title: meta.title || "Weekly Message",
         weekOf: meta.weekOf || date,
+        author: meta.author || null,
         body,
         html: markOutlineHeadings(marked.parse(body)),
       };
@@ -117,11 +118,12 @@ function escapeHtml(s) {
     .replaceAll('"', "&quot;");
 }
 
-function pageShell({ config, title, weekOf, contentHtml, navHtml, isLatest }) {
+function pageShell({ config, title, weekOf, contentHtml, navHtml, isLatest, author }) {
   const css = readAsset("style.css");
   const badge = isLatest
     ? `<p class="badge">This week</p>`
     : `<p class="badge badge-archive">Archive</p>`;
+  const authorLabel = author || config.authorLabel;
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -142,7 +144,7 @@ function pageShell({ config, title, weekOf, contentHtml, navHtml, isLatest }) {
       <p class="brand">${escapeHtml(config.siteName)}</p>
       ${badge}
       <h1>${escapeHtml(title)}</h1>
-      <p class="meta">${escapeHtml(config.authorLabel)} · Week of ${escapeHtml(weekOf)}</p>
+      <p class="meta">${escapeHtml(authorLabel)} · Week of ${escapeHtml(weekOf)}</p>
     </header>
     <article class="content">
       ${contentHtml}
@@ -198,6 +200,7 @@ async function build() {
     config,
     title: latest.title,
     weekOf: latest.weekOf,
+    author: latest.author,
     contentHtml: latest.html,
     navHtml: weeks.length > 1
       ? `<nav class="nav nav-top">
@@ -216,6 +219,7 @@ async function build() {
       config,
       title: week.title,
       weekOf: week.weekOf,
+      author: week.author,
       contentHtml: week.html,
       navHtml: `<nav class="nav nav-top">
         <a href="../">This week</a>
@@ -268,6 +272,20 @@ async function build() {
 </body>
 </html>`;
   fs.writeFileSync(path.join(outDir, "weeks", "index.html"), archiveHtml, "utf8");
+
+  // Copy any downloadable files (guest outlines, presentations, etc.)
+  const downloadsSrc = path.join(root, "downloads");
+  const downloadsDest = path.join(outDir, "downloads");
+  if (fs.existsSync(downloadsSrc)) {
+    ensureDir(downloadsDest);
+    for (const name of fs.readdirSync(downloadsSrc)) {
+      if (name.startsWith(".")) continue;
+      fs.copyFileSync(
+        path.join(downloadsSrc, name),
+        path.join(downloadsDest, name)
+      );
+    }
+  }
 
   const qrUrl = await writeQr(config);
 

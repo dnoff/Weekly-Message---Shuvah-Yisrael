@@ -280,8 +280,8 @@ body {
   margin: 0;
 }
 
-.content h3 {
-  color: var(--ink);
+.content a[href*="downloads/"] {
+  font-weight: 600;
 }
 
 .nav {
