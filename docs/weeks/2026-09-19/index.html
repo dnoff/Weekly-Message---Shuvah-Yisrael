@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lessons from Testing — The Akedah · Shuvah Yisrael</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <style>:root {
+  --ink: #1a2e28;
+  --muted: #4a5c56;
+  --paper: #f3f6f4;
+  --sheet: #fafcfb;
+  --accent: #0f6b5c;
+  --accent-soft: #d7ebe5;
+  --line: #c9d6d1;
+  --shadow: 0 18px 50px rgba(26, 46, 40, 0.12);
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Source Sans 3", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.55;
+}
+
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 80% 50% at 10% -10%, #cfe8df 0%, transparent 55%),
+    radial-gradient(ellipse 70% 45% at 100% 0%, #d9e4f0 0%, transparent 50%),
+    linear-gradient(165deg, #e8f0ec 0%, #eef2f5 45%, #e6ebe8 100%);
+}
+
+.sheet {
+  width: min(42rem, calc(100% - 2rem));
+  margin: 1.5rem auto 3rem;
+  padding: 1.75rem 1.5rem 2.25rem;
+  background: color-mix(in srgb, var(--sheet) 92%, white);
+  border: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+  box-shadow: var(--shadow);
+  animation: rise 0.55s ease-out both;
+}
+
+@media (min-width: 640px) {
+  .sheet {
+    margin-top: 2.5rem;
+    padding: 2.5rem 2.75rem 3rem;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.top {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.65rem, 4vw, 2.15rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  animation: fade 0.7s ease 0.1s both;
+}
+
+.badge {
+  display: inline-block;
+  margin: 0 0 0.65rem;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-soft);
+  animation: fade 0.7s ease 0.15s both;
+}
+
+.badge-archive {
+  color: var(--muted);
+  background: #e4e9e7;
+}
+
+.top h1 {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 3.2vw, 1.75rem);
+  font-weight: 500;
+  line-height: 1.25;
+  animation: fade 0.7s ease 0.2s both;
+}
+
+.meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  animation: fade 0.7s ease 0.25s both;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.content {
+  font-size: 1.05rem;
+}
+
+.content > *:first-child {
+  margin-top: 0;
+}
+
+.content h2 {
+  margin: 1.75rem 0 0.65rem;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.content h3 {
+  margin: 1.35rem 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.content h4 {
+  margin: 1.35rem 0 0.5rem;
+  font-size: 1rem;
+}
+
+.outline-legend {
+  margin: 1.75rem 0 2rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.outline-legend p {
+  margin: 0 0 0.7rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.outline-legend div {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.content .outline-legend a {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 0.65rem;
+  color: var(--ink);
+  text-decoration: none;
+  background: var(--accent-soft);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.content .outline-legend a:hover {
+  background: color-mix(in srgb, var(--accent-soft) 72%, white);
+  transform: translateX(2px);
+}
+
+.outline-legend a span {
+  flex: none;
+  min-width: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  background: var(--accent);
+}
+
+.content .outline-point {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 2.5rem 0 1rem;
+  padding-top: 1.1rem;
+  scroll-margin-top: 1rem;
+  border-top: 2px solid var(--accent-soft);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.outline-marker {
+  flex: none;
+  min-width: 2.6rem;
+  padding: 0.3rem 0.55rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #fff;
+  background: var(--accent);
+}
+
+.content .outline-sub {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 1.75rem 0 0.75rem;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.outline-letter {
+  flex: none;
+  min-width: 1.9rem;
+  padding: 0.22rem 0.45rem;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--accent);
+  background: var(--accent-soft);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+
+.content p,
+.content li {
+  color: var(--ink);
+}
+
+.content a {
+  color: var(--accent);
+  text-underline-offset: 2px;
+}
+
+.content ul,
+.content ol {
+  padding-left: 1.25rem;
+}
+
+.content li + li {
+  margin-top: 0.35rem;
+}
+
+.content code {
+  font-size: 0.9em;
+  padding: 0.1em 0.35em;
+  background: #e8eeeb;
+}
+
+.content blockquote {
+  margin: 1.25rem 0;
+  padding: 0.85rem 1rem;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+.content blockquote p {
+  margin: 0;
+}
+
+.content a[href*="downloads/"] {
+  font-weight: 600;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-weight: 600;
+}
+
+.nav-top {
+  margin: 0 0 1.25rem;
+  padding: 0 0 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.nav a {
+  color: var(--accent);
+  text-decoration: none;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.nav a:hover {
+  border-color: var(--accent);
+}
+
+.nav a.nav-current {
+  color: var(--ink);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.week-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.week-list li + li {
+  margin-top: 0.75rem;
+}
+
+.week-list a {
+  display: grid;
+  gap: 0.15rem;
+  padding: 1rem 1.1rem;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--line);
+  background: #fff;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.week-list a:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.week-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.week-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.week-date {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+</style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <main class="sheet">
+    <nav class="nav nav-top">
+        <a href="../">This week</a>
+        <a href="./">Past weeks</a>
+      </nav>
+    <header class="top">
+      <p class="brand">Shuvah Yisrael</p>
+      <p class="badge badge-archive">Archive</p>
+      <h1>Lessons from Testing — The Akedah</h1>
+      <p class="meta">Rabbi Larry Feldman · Week of September 19, 2026 · 8 Tishrei 5787</p>
+    </header>
+    <article class="content">
+      <h2>Shabbat at Shuvah Yisrael</h2>
+<p><strong>Parashat Haazinu</strong> · פרשת האזינו<br><strong>Torah:</strong> Deuteronomy 32:1–52<br><strong>Haftarah:</strong> Hosea 14:2–10; Joel 2:15–27  </p>
+<p><strong>Shabbat Service</strong> — 10:00 AM (PDT)<br>Livestream: <a href="https://www.shuvahyisrael.org">www.shuvahyisrael.org</a> · <a href="https://www.youtube.com/@ShuvahYisrael">YouTube</a><br>Email: <a href="mailto:info@shuvahyisrael.org">info@shuvahyisrael.org</a></p>
+<h3>Service Order</h3>
+<ol>
+<li>Songs of Worship  </li>
+<li>Hebrew Liturgy  </li>
+<li>Scripture Reading: Hosea 14:1–9 (2–10) and Acts 3:18–21, 26  </li>
+<li>Announcements &amp; Offering · Scott Burton Memorial  </li>
+<li>Songs of Worship <em>(Children dismissed for Shabbat School)</em>  </li>
+<li><strong>Message:</strong> Lessons from Testing — The Akedah · Rabbi Larry Feldman  </li>
+<li>Closing Benediction</li>
+</ol>
+<h3>Word for the Week · מילת השבוע</h3>
+<blockquote>
+<p>For the life of the flesh is in the blood, and I have given it to you on the altar to make atonement for your souls; for it is the blood by reason of the life that makes atonement.<br>— <strong>Leviticus 17:11</strong></p>
+</blockquote>
+<h3>Reading the Bible Together</h3>
+<p>1 Samuel 7 – 13</p>
+<hr>
+<h2>Message Outline</h2>
+<p><em>Lessons from Testing — The Akedah</em><br>Genesis 22:1–14 · Rabbi Larry Feldman · September 19, 2026</p>
+<p><strong>Opening question:</strong> When God tries us, what does He want from us?</p>
+<nav class="outline-legend" aria-label="Message outline">
+    <p>Jump to a section</p>
+    <div><a href="#outline-i"><span>I</span>God wants us to obey Him</a><a href="#outline-ii"><span>II</span>God wants us to be willing to surrender all</a><a href="#outline-iii"><span>III</span>God wants us to trust Him</a><a href="#outline-iv"><span>IV</span>God wants to prove our love for Him</a><a href="#outline-v"><span>V</span>God wants to provide for our needs</a></div>
+  </nav><h3 id="outline-i" class="outline-point"><span class="outline-marker">I</span><span>God wants us to obey Him</span></h3>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>God tested Abraham</span></h4>
+<p><strong>Genesis 22:1–3</strong><br>1 Now it came about after these things, that God tested Abraham, and said to him, “Abraham!” And he said, “Here I am.” 2 He said, “Take now your son, your only son, whom you love, Isaac, and go to the land of Moriah, and offer him there as a burnt offering on one of the mountains of which I will tell you.” 3 So Abraham rose early in the morning and saddled his donkey, and took two of his young men with him and Isaac his son; and he split wood for the burnt offering, and arose and went to the place of which God had told him.</p>
+<h4 class="outline-sub"><span class="outline-letter">B</span><span>God tested Israel</span></h4>
+<h4 class="outline-sub"><span class="outline-letter">C</span><span>God tests us</span></h4>
+<blockquote>
+<p><strong>Key:</strong> Obey — but start small.</p>
+</blockquote>
+<h3 id="outline-ii" class="outline-point"><span class="outline-marker">II</span><span>God wants us to be willing to surrender all</span></h3>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>Abraham was willing</span></h4>
+<p><strong>Genesis 22:6–8</strong><br>6 Abraham took the wood of the burnt offering and laid it on Isaac his son, and he took in his hand the fire and the knife. So the two of them walked on together. 7 Isaac spoke to Abraham his father and said, “My father!” And he said, “Here I am, my son.” And he said, “Behold, the fire and the wood, but where is the lamb for the burnt offering?” 8 Abraham said, “God will provide for Himself the lamb for the burnt offering, my son.” So the two of them walked on together.</p>
+<h4 class="outline-sub"><span class="outline-letter">B</span><span>The boys of Babylon were willing</span></h4>
+<p><strong>Daniel 3:16–18</strong><br>16 Shadrach, Meshach and Abed-nego replied to the king, “O Nebuchadnezzar, we do not need to give you an answer concerning this matter. 17 If it be so, our God whom we serve is able to deliver us from the furnace of blazing fire; and He will deliver us out of your hand, O king. 18 But even if He does not, let it be known to you, O king, that we are not going to serve your gods or worship the golden image that you have set up.”</p>
+<p><strong>Daniel 3:28</strong><br>28 Nebuchadnezzar responded and said, “Blessed be the God of Shadrach, Meshach and Abed-nego, who has sent His angel and delivered His servants who put their trust in Him, violating the king’s command, and yielded up their bodies so as not to serve or worship any god except their own God.”</p>
+<h4 class="outline-sub"><span class="outline-letter">C</span><span>We need to be willing</span></h4>
+<blockquote>
+<p><strong>Key:</strong> No personal gain.</p>
+</blockquote>
+<h3 id="outline-iii" class="outline-point"><span class="outline-marker">III</span><span>God wants us to trust Him</span></h3>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>Abraham trusted Him</span></h4>
+<p><strong>Genesis 22:9–10</strong><br>9 Then they came to the place of which God had told him; and Abraham built the altar there and arranged the wood, and bound his son Isaac and laid him on the altar, on top of the wood. 10 Abraham stretched out his hand and took the knife to slay his son.</p>
+<p><strong>Hebrews 11:17–19</strong><br>17 By faith Abraham, when he was tested, offered up Isaac, and he who had received the promises was offering up his only begotten son; 18 it was he to whom it was said, “IN ISAAC YOUR DESCENDANTS SHALL BE CALLED.” 19 He considered that God is able to raise people even from the dead, from which he also received him back as a type.</p>
+<h4 class="outline-sub"><span class="outline-letter">B</span><span>The clan from Shushan trusted</span></h4>
+<h4 class="outline-sub"><span class="outline-letter">C</span><span>We need to trust Him</span></h4>
+<h3 id="outline-iv" class="outline-point"><span class="outline-marker">IV</span><span>God wants to prove our love for Him</span></h3>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>God wanted to show Abraham</span></h4>
+<p><strong>Genesis 22:11–12</strong><br>11 But the angel of the Lord called to him from heaven and said, “Abraham, Abraham!” And he said, “Here I am.” 12 He said, “Do not stretch out your hand against the lad, and do nothing to him; for now I know that you fear God, since you have not withheld your son, your only son, from Me.”</p>
+<h4 class="outline-sub"><span class="outline-letter">B</span><span>God wants to show us</span></h4>
+<ul>
+<li>The nature of my faith  </li>
+<li>The strength of my commitment  </li>
+<li>The level of my maturity  </li>
+<li>The health of my attitude</li>
+</ul>
+<h4 class="outline-sub"><span class="outline-letter">C</span><span>God wants to show us</span></h4>
+<blockquote>
+<p><strong>Key:</strong> Admit where you are.</p>
+</blockquote>
+<h3 id="outline-v" class="outline-point"><span class="outline-marker">V</span><span>God wants to provide for our needs</span></h3>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>God provided for Abraham</span></h4>
+<p><strong>Genesis 22:13–14</strong><br>13 Then Abraham raised his eyes and looked, and behold, behind him a ram caught in the thicket by his horns; and Abraham went and took the ram and offered him up for a burnt offering in the place of his son. 14 Abraham called the name of that place The LORD Will Provide, as it is said to this day, “In the mount of the LORD it will be provided.”</p>
+<h4 class="outline-sub"><span class="outline-letter">B</span><span>God provided for the world</span></h4>
+<p><strong>Psalm 22:14–18</strong><br>14 I am poured out like water, and all my bones are out of joint; my heart is like wax; it is melted within me. 15 My strength is dried up like a potsherd, and my tongue cleaves to my jaws; and You lay me in the dust of death. 16 For dogs have surrounded me; a band of evildoers has encompassed me; they pierced my hands and my feet. 17 I can count all my bones. They look, they stare at me; 18 They divide my garments among them, and for my clothing they cast lots.</p>
+<p><strong>Isaiah 53:4–6, 10, 12</strong><br>4 Surely our griefs He Himself bore, and our sorrows He carried; yet we ourselves esteemed Him stricken, smitten of God, and afflicted. 5 But He was pierced through for our transgressions, He was crushed for our iniquities; the chastening for our well-being fell upon Him, and by His scourging we are healed. 6 All of us like sheep have gone astray, each of us has turned to his own way; but the Lord has caused the iniquity of us all to fall on Him. 10 But the Lord was pleased to crush Him, putting Him to grief; if He would render Himself as a guilt offering, He will see His offspring, He will prolong His days, and the good pleasure of the Lord will prosper in His hand. 12 Therefore, I will allot Him a portion with the great, and He will divide the booty with the strong; because He poured out Himself to death, and was numbered with the transgressors; yet He Himself bore the sin of many, and interceded for the transgressors.</p>
+<hr>
+<h3>Conclusion</h3>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>Tests and trials come to all</span></h4>
+<h4 class="outline-sub"><span class="outline-letter">B</span><span>God is sovereign and in control</span></h4>
+<h4 class="outline-sub"><span class="outline-letter">C</span><span>God wants us to trust and obey</span></h4>
+<h4 class="outline-sub"><span class="outline-letter">D</span><span>God wants us to see where we are</span></h4>
+<h4 class="outline-sub"><span class="outline-letter">E</span><span>God wants to meet our needs</span></h4>
+<hr>
+<h3>Welcome · ברוך הבא</h3>
+<p>If you are new to Shuvah Yisrael, we welcome you. Please ask one of the leaders after service, or contact us at <a href="mailto:info@shuvahyisrael.org">info@shuvahyisrael.org</a>.</p>
+<p><em>Messianic Rabbi: Larry Feldman</em></p>
+
+    </article>
+  </main>
+</body>
+</html>
