@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Joy in the Word — Simchat Torah · Shuvah Yisrael</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <style>:root {
+  --ink: #1a2e28;
+  --muted: #4a5c56;
+  --paper: #f3f6f4;
+  --sheet: #fafcfb;
+  --accent: #0f6b5c;
+  --accent-soft: #d7ebe5;
+  --line: #c9d6d1;
+  --shadow: 0 18px 50px rgba(26, 46, 40, 0.12);
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Source Sans 3", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.55;
+}
+
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 80% 50% at 10% -10%, #cfe8df 0%, transparent 55%),
+    radial-gradient(ellipse 70% 45% at 100% 0%, #d9e4f0 0%, transparent 50%),
+    linear-gradient(165deg, #e8f0ec 0%, #eef2f5 45%, #e6ebe8 100%);
+}
+
+.sheet {
+  width: min(42rem, calc(100% - 2rem));
+  margin: 1.5rem auto 3rem;
+  padding: 1.75rem 1.5rem 2.25rem;
+  background: color-mix(in srgb, var(--sheet) 92%, white);
+  border: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+  box-shadow: var(--shadow);
+  animation: rise 0.55s ease-out both;
+}
+
+@media (min-width: 640px) {
+  .sheet {
+    margin-top: 2.5rem;
+    padding: 2.5rem 2.75rem 3rem;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.top {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.65rem, 4vw, 2.15rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  animation: fade 0.7s ease 0.1s both;
+}
+
+.badge {
+  display: inline-block;
+  margin: 0 0 0.65rem;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-soft);
+  animation: fade 0.7s ease 0.15s both;
+}
+
+.badge-archive {
+  color: var(--muted);
+  background: #e4e9e7;
+}
+
+.top h1 {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 3.2vw, 1.75rem);
+  font-weight: 500;
+  line-height: 1.25;
+  animation: fade 0.7s ease 0.2s both;
+}
+
+.meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  animation: fade 0.7s ease 0.25s both;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.content {
+  font-size: 1.05rem;
+}
+
+.content > *:first-child {
+  margin-top: 0;
+}
+
+.content h2 {
+  margin: 1.75rem 0 0.65rem;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.content h3 {
+  margin: 1.35rem 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.content h4 {
+  margin: 1.35rem 0 0.5rem;
+  font-size: 1rem;
+}
+
+.outline-legend {
+  margin: 1.75rem 0 2rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.outline-legend p {
+  margin: 0 0 0.7rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.outline-legend div {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.content .outline-legend a {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 0.65rem;
+  color: var(--ink);
+  text-decoration: none;
+  background: var(--accent-soft);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.content .outline-legend a:hover {
+  background: color-mix(in srgb, var(--accent-soft) 72%, white);
+  transform: translateX(2px);
+}
+
+.outline-legend a span {
+  flex: none;
+  min-width: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  background: var(--accent);
+}
+
+.content .outline-point {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 2.5rem 0 1rem;
+  padding-top: 1.1rem;
+  scroll-margin-top: 1rem;
+  border-top: 2px solid var(--accent-soft);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.outline-marker {
+  flex: none;
+  min-width: 2.6rem;
+  padding: 0.3rem 0.55rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #fff;
+  background: var(--accent);
+}
+
+.content .outline-sub {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 1.75rem 0 0.75rem;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.outline-letter {
+  flex: none;
+  min-width: 1.9rem;
+  padding: 0.22rem 0.45rem;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--accent);
+  background: var(--accent-soft);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+
+.content p,
+.content li {
+  color: var(--ink);
+}
+
+.content a {
+  color: var(--accent);
+  text-underline-offset: 2px;
+}
+
+.content ul,
+.content ol {
+  padding-left: 1.25rem;
+}
+
+.content li + li {
+  margin-top: 0.35rem;
+}
+
+.content code {
+  font-size: 0.9em;
+  padding: 0.1em 0.35em;
+  background: #e8eeeb;
+}
+
+.content blockquote {
+  margin: 1.25rem 0;
+  padding: 0.85rem 1rem;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+.content blockquote p {
+  margin: 0;
+}
+
+.content a[href*="downloads/"] {
+  font-weight: 600;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-weight: 600;
+}
+
+.nav-top {
+  margin: 0 0 1.25rem;
+  padding: 0 0 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.nav a {
+  color: var(--accent);
+  text-decoration: none;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.nav a:hover {
+  border-color: var(--accent);
+}
+
+.nav a.nav-current {
+  color: var(--ink);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.week-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.week-list li + li {
+  margin-top: 0.75rem;
+}
+
+.week-list a {
+  display: grid;
+  gap: 0.15rem;
+  padding: 1rem 1.1rem;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--line);
+  background: #fff;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.week-list a:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.week-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.week-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.week-date {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+</style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <main class="sheet">
+    <nav class="nav nav-top">
+        <a href="../">This week</a>
+        <a href="./">Past weeks</a>
+      </nav>
+    <header class="top">
+      <p class="brand">Shuvah Yisrael</p>
+      <p class="badge">This week</p>
+      <h1>Joy in the Word — Simchat Torah</h1>
+      <p class="meta">Rabbi Larry Feldman · Week of October 3, 2026 · 22 Tishrei 5787</p>
+    </header>
+    <article class="content">
+      <h2>Simchat Torah at Shuvah Yisrael</h2>
+<p><strong>Shemini Atzeret</strong> · שמיני עצרת<br><strong>Eighth Day of Festival · Simchat Torah Service</strong></p>
+<p><strong>Service</strong> — 10:00 AM (PDT)<br>Livestream: <a href="https://www.shuvahyisrael.org">www.shuvahyisrael.org</a> · <a href="https://www.youtube.com/@ShuvahYisrael">YouTube</a><br>Email: <a href="mailto:info@shuvahyisrael.org">info@shuvahyisrael.org</a></p>
+<h3>Service Order</h3>
+<ol>
+<li>Songs of Worship  </li>
+<li>Opening Liturgy · Torah Service  </li>
+<li>Scripture Reading: Deuteronomy 34:10–12; Genesis 1:1–5; John 1:1–5 · Etz Chaim  </li>
+<li>Announcements &amp; Offering  </li>
+<li>Songs of Worship <em>(Children dismissed for Shabbat School)</em>  </li>
+<li><strong>Message:</strong> Simchat Torah — Joy in the Word · Rabbi Larry Feldman  </li>
+<li>Closing Benediction</li>
+</ol>
+<h3>Word for the Week · מילת השבוע</h3>
+<blockquote>
+<p>“But his delight is in the law of the LORD, and in His law he meditates day and night.”<br>— <strong>Psalm 1:2</strong></p>
+</blockquote>
+<h3>Reading the Bible Together</h3>
+<p>1 Samuel 21 – 27<br>James (Jacob) 1 – 5</p>
+<h3>Upcoming Events</h3>
+<ul>
+<li><strong>Sat, Oct 17</strong> — Hebrew Class, 8:15 AM – 9:15 AM, Building B  </li>
+<li><strong>Fri, Nov 6</strong> — Shabbat Dinner, 6:00 PM – 8:00 PM  </li>
+<li><strong>Sat, Dec 5</strong> — Hanukkah Service 10:00 AM &amp; Livestream Online, Holiday Nosh 8:50 AM</li>
+</ul>
+<hr>
+<h2>Message Outline</h2>
+<p><em>Joy in the Word — Simchat Torah</em><br>Rabbi Larry Feldman · October 3, 2026 · 22 Tishrei 5787</p>
+<p><strong>Opening question:</strong> Why should we read and study the Bible?</p>
+<p><strong>Main Idea:</strong> We should read and study the Bible because it is God’s <strong>gift</strong> to guide us through <strong>life</strong>.</p>
+<nav class="outline-legend" aria-label="Message outline">
+    <p>Jump to a section</p>
+    <div><a href="#outline-i"><span>I</span>The Bible is God’s gift to man</a><a href="#outline-ii"><span>II</span>The Bible was written by God</a><a href="#outline-iii"><span>III</span>The Bible is for our instruction</a><a href="#outline-iv"><span>IV</span>The Bible is for our benefit</a><a href="#outline-v"><span>V</span>The Bible guarantees our success</a></div>
+  </nav><h3 id="outline-i" class="outline-point"><span class="outline-marker">I</span><span>The Bible is God’s gift to man</span></h3>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>It was given to us by God</span></h4>
+<p><strong>2 Timothy 3:14–16</strong><br>14 You, however, continue in the things you have learned and become convinced of, knowing from whom you have learned them, 15 and that from childhood you have known the sacred writings which are able to give you the wisdom that leads to salvation through faith which is in Messiah Yeshua. 16 All Scripture is inspired by God and profitable for teaching, for reproof, for correction, for training in righteousness;</p>
+<h4 class="outline-sub"><span class="outline-letter">B</span><span>We profit from it</span></h4>
+<p><strong>2 Timothy 3:16</strong><br>16 All Scripture is inspired by God and profitable for teaching, for reproof, for correction, for training in righteousness;</p>
+<h4 class="outline-sub"><span class="outline-letter">C</span><span>It equips us for life</span></h4>
+<p><strong>2 Timothy 3:17</strong><br>17 so that the man of God may be adequate, equipped for every good work.</p>
+<h3 id="outline-ii" class="outline-point"><span class="outline-marker">II</span><span>The Bible was written by God</span></h3>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>To lead us in life</span></h4>
+<p><strong>2 Peter 1:14–19</strong><br>14 knowing that the laying aside of my earthly dwelling is imminent, as also our Messiah Yeshua has made clear to me. 15 And I will also be diligent that at any time after my departure you will be able to call these things to mind. 16 For we did not follow cleverly devised tales when we made known to you the power and coming of our Messiah Yeshua, but we were eyewitnesses of His majesty. 17 For when He received honor and glory from God the Father, such an utterance as this was made to Him by the Majestic Glory, “This is My beloved Son with whom I am well-pleased”— 18 and we ourselves heard this utterance made from heaven when we were with Him on the holy mountain. 19 So we have the prophetic word made more sure, to which you do well to pay attention as to a lamp shining in a dark place, until the day dawns and the morning star arises in your hearts.</p>
+<h4 class="outline-sub"><span class="outline-letter">B</span><span>We did not conceive it</span></h4>
+<p><strong>2 Peter 1:20</strong><br>20 But know this first of all, that no prophecy of Scripture is a matter of one’s own interpretation,</p>
+<h4 class="outline-sub"><span class="outline-letter">C</span><span>It was designed by God</span></h4>
+<p><strong>2 Peter 1:21</strong><br>21 for no prophecy was ever made by an act of human will, but men moved by the Holy Spirit spoke from God.</p>
+<h3 id="outline-iii" class="outline-point"><span class="outline-marker">III</span><span>The Bible is for our instruction</span></h3>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>It should dwell in us</span></h4>
+<p><strong>Deuteronomy 11:18</strong><br>18 “You shall therefore impress these words of mine on your heart and on your soul; and you shall bind them as a sign on your hand, and they shall be as frontals on your forehead.”</p>
+<h4 class="outline-sub"><span class="outline-letter">B</span><span>It is for our children also</span></h4>
+<p><strong>Deuteronomy 11:19</strong><br>19 “You shall teach them to your sons, talking of them when you sit in your house and when you walk along the road and when you lie down and when you rise up.”</p>
+<h4 class="outline-sub"><span class="outline-letter">C</span><span>It is for our daily lives</span></h4>
+<p><strong>Deuteronomy 11:20–23</strong><br>20 You shall write them on the doorposts of your house and on your gates, 21 so that your days and the days of your sons may be multiplied on the land which the LORD swore to your fathers to give them, as long as the heavens remain above the earth. 22 For if you are careful to keep all this commandment which I am commanding you to do, to love the LORD your God, to walk in all His ways and hold fast to Him, 23 then the LORD will drive out all these nations from before you, and you will dispossess nations greater and mightier than you.</p>
+<h3 id="outline-iv" class="outline-point"><span class="outline-marker">IV</span><span>The Bible is for our benefit</span></h3>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>We receive the reward</span></h4>
+<p><strong>Psalm 19:7–11</strong><br>7 The law of the LORD is perfect, restoring the soul; the testimony of the LORD is sure, making wise the simple. 8 The precepts of the LORD are right, rejoicing the heart; the commandment of the LORD is pure, enlightening the eyes. 9 The fear of the LORD is clean, enduring forever; the judgments of the LORD are true; they are righteous altogether. 10 They are more desirable than gold, yes, than much fine gold; sweeter also than honey and the drippings of the honeycomb. 11 Moreover, by them Your servant is warned; in keeping them there is great reward.</p>
+<h4 class="outline-sub"><span class="outline-letter">B</span><span>It is our advantage in life</span></h4>
+<p><strong>Psalm 119:9, 11, 24, 50</strong><br>9 How can a young man keep his way pure? By keeping it according to Your word.<br>11 Your word I have treasured in my heart, that I may not sin against You.<br>24 Your testimonies also are my delight; they are my counselors.<br>50 This is my comfort in my affliction, that Your word has revived me.</p>
+<p><strong>Psalm 119:72, 98–100</strong><br>72 The law of Your mouth is better to me than thousands of gold and silver pieces.<br>98 Your commandments make me wiser than my enemies, for they are ever mine.<br>99 I have more insight than all my teachers, for Your testimonies are my meditation.<br>100 I understand more than the aged, because I have observed Your precepts.</p>
+<p><strong>Psalm 119:101, 105, 107, 130</strong><br>101 I have restrained my feet from every evil way, that I may keep Your word.<br>105 Your word is a lamp to my feet and a light to my path.<br>107 I am exceedingly afflicted; revive me, O LORD, according to Your word.<br>130 The unfolding of Your words gives light; it gives understanding to the simple.</p>
+<p><strong>Psalm 119:141, 143, 147, 162, 165</strong><br>141 I am small and despised, Yet I do not forget Your precepts.<br>143 Trouble and anguish have come upon me, Yet Your commandments are my delight.<br>147 I rise before dawn and cry for help; I wait for Your words.<br>162 I rejoice at Your word, as one who finds great spoil.<br>165 Those who love Your law have great peace, and nothing causes them to stumble.</p>
+<h3 id="outline-v" class="outline-point"><span class="outline-marker">V</span><span>The Bible guarantees our success</span></h3>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>God told Joshua</span></h4>
+<p><strong>Joshua 1:6–8</strong><br>6 Be strong and courageous, for you shall give this people possession of the land which I swore to their fathers to give them. 7 Only be strong and very courageous; be careful to do according to all the law which Moses My servant commanded you; do not turn from it to the right or to the left, so that you may have success wherever you go. 8 This book of the law shall not depart from your mouth, but you shall meditate on it day and night, so that you may be careful to do according to all that is written in it; for then you will make your way prosperous, and then you will have success.</p>
+<h4 class="outline-sub"><span class="outline-letter">B</span><span>God told David</span></h4>
+<p><strong>Psalm 1:1–3</strong><br>1 How blessed is the man who does not walk in the counsel of the wicked, nor stand in the path of sinners, nor sit in the seat of scoffers! 2 But his delight is in the law of the LORD, and in His law he meditates day and night. 3 He will be like a tree firmly planted by streams of water, which yields its fruit in its season and its leaf does not wither; and in whatever he does, he prospers.</p>
+<h4 class="outline-sub"><span class="outline-letter">C</span><span>David told Solomon</span></h4>
+<p><strong>1 Kings 2:1–3</strong><br>1 As David’s time to die drew near, he charged Solomon his son, saying, 2 “I am going the way of all the earth. Be strong, therefore, and show yourself a man. 3 Keep the charge of the LORD your God, to walk in His ways, to keep His statutes, His commandments, His ordinances, and His testimonies, according to what is written in the Law of Moses, that you may succeed in all that you do and wherever you turn,”</p>
+<hr>
+<h3>Conclusion</h3>
+<p>We should <strong>read</strong> and <strong>study</strong> the Bible because it is God’s gift to <strong>guide</strong> us through life.</p>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>Commit to reading the Bible every day</span></h4>
+<p><strong>Jeremiah 15:16</strong><br>16 Your words were found and I ate them, and Your words became for me a joy and the delight of my heart; for I have been called by Your name, O LORD God of hosts.</p>
+<h4 class="outline-sub"><span class="outline-letter">B</span><span>Commit to reading through the Bible</span></h4>
+<blockquote>
+<p>Joy in the Word — God’s gift to guide us through life.</p>
+</blockquote>
+<hr>
+<h3>Welcome · ברוך הבא</h3>
+<p>If you are new to Shuvah Yisrael, we welcome you. Please ask one of the leaders after service, or contact us at <a href="mailto:info@shuvahyisrael.org">info@shuvahyisrael.org</a>.</p>
+<p><em>Messianic Rabbi: Larry Feldman</em></p>
+
+    </article>
+  </main>
+</body>
+</html>
