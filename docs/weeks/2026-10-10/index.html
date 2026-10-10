@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Messiah on Trial — Who Does the Tanakh Say He Is? · Shuvah Yisrael</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <style>:root {
+  --ink: #1a2e28;
+  --muted: #4a5c56;
+  --paper: #f3f6f4;
+  --sheet: #fafcfb;
+  --accent: #0f6b5c;
+  --accent-soft: #d7ebe5;
+  --line: #c9d6d1;
+  --shadow: 0 18px 50px rgba(26, 46, 40, 0.12);
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Source Sans 3", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.55;
+}
+
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 80% 50% at 10% -10%, #cfe8df 0%, transparent 55%),
+    radial-gradient(ellipse 70% 45% at 100% 0%, #d9e4f0 0%, transparent 50%),
+    linear-gradient(165deg, #e8f0ec 0%, #eef2f5 45%, #e6ebe8 100%);
+}
+
+.sheet {
+  width: min(42rem, calc(100% - 2rem));
+  margin: 1.5rem auto 3rem;
+  padding: 1.75rem 1.5rem 2.25rem;
+  background: color-mix(in srgb, var(--sheet) 92%, white);
+  border: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+  box-shadow: var(--shadow);
+  animation: rise 0.55s ease-out both;
+}
+
+@media (min-width: 640px) {
+  .sheet {
+    margin-top: 2.5rem;
+    padding: 2.5rem 2.75rem 3rem;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.top {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.65rem, 4vw, 2.15rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  animation: fade 0.7s ease 0.1s both;
+}
+
+.badge {
+  display: inline-block;
+  margin: 0 0 0.65rem;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-soft);
+  animation: fade 0.7s ease 0.15s both;
+}
+
+.badge-archive {
+  color: var(--muted);
+  background: #e4e9e7;
+}
+
+.top h1 {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 3.2vw, 1.75rem);
+  font-weight: 500;
+  line-height: 1.25;
+  animation: fade 0.7s ease 0.2s both;
+}
+
+.meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  animation: fade 0.7s ease 0.25s both;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.content {
+  font-size: 1.05rem;
+}
+
+.content > *:first-child {
+  margin-top: 0;
+}
+
+.content h2 {
+  margin: 1.75rem 0 0.65rem;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.content h3 {
+  margin: 1.35rem 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.content h4 {
+  margin: 1.35rem 0 0.5rem;
+  font-size: 1rem;
+}
+
+.outline-legend {
+  margin: 1.75rem 0 2rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.outline-legend p {
+  margin: 0 0 0.7rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.outline-legend div {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.content .outline-legend a {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 0.65rem;
+  color: var(--ink);
+  text-decoration: none;
+  background: var(--accent-soft);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.content .outline-legend a:hover {
+  background: color-mix(in srgb, var(--accent-soft) 72%, white);
+  transform: translateX(2px);
+}
+
+.outline-legend a span {
+  flex: none;
+  min-width: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  background: var(--accent);
+}
+
+.content .outline-point {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 2.5rem 0 1rem;
+  padding-top: 1.1rem;
+  scroll-margin-top: 1rem;
+  border-top: 2px solid var(--accent-soft);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.outline-marker {
+  flex: none;
+  min-width: 2.6rem;
+  padding: 0.3rem 0.55rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #fff;
+  background: var(--accent);
+}
+
+.content .outline-sub {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 1.75rem 0 0.75rem;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.outline-letter {
+  flex: none;
+  min-width: 1.9rem;
+  padding: 0.22rem 0.45rem;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--accent);
+  background: var(--accent-soft);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+
+.content p,
+.content li {
+  color: var(--ink);
+}
+
+.content a {
+  color: var(--accent);
+  text-underline-offset: 2px;
+}
+
+.content ul,
+.content ol {
+  padding-left: 1.25rem;
+}
+
+.content li + li {
+  margin-top: 0.35rem;
+}
+
+.content code {
+  font-size: 0.9em;
+  padding: 0.1em 0.35em;
+  background: #e8eeeb;
+}
+
+.content blockquote {
+  margin: 1.25rem 0;
+  padding: 0.85rem 1rem;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+.content blockquote p {
+  margin: 0;
+}
+
+.content a[href*="downloads/"] {
+  font-weight: 600;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-weight: 600;
+}
+
+.nav-top {
+  margin: 0 0 1.25rem;
+  padding: 0 0 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.nav a {
+  color: var(--accent);
+  text-decoration: none;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.nav a:hover {
+  border-color: var(--accent);
+}
+
+.nav a.nav-current {
+  color: var(--ink);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.week-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.week-list li + li {
+  margin-top: 0.75rem;
+}
+
+.week-list a {
+  display: grid;
+  gap: 0.15rem;
+  padding: 1rem 1.1rem;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--line);
+  background: #fff;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.week-list a:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.week-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.week-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.week-date {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+</style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <main class="sheet">
+    <nav class="nav nav-top">
+        <a href="../">This week</a>
+        <a href="./">Past weeks</a>
+      </nav>
+    <header class="top">
+      <p class="brand">Shuvah Yisrael</p>
+      <p class="badge">This week</p>
+      <h1>Messiah on Trial — Who Does the Tanakh Say He Is?</h1>
+      <p class="meta">James Reppert · Guest Speaker · Week of October 10, 2026 · 29 Tishrei 5787</p>
+    </header>
+    <article class="content">
+      <h2>Shabbat at Shuvah Yisrael</h2>
+<p><strong>Parashat Bereshit</strong> · פרשת בראשית<br><strong>Torah:</strong> Genesis 1:1 – 6:8<br><strong>Haftarah:</strong> 1 Samuel 20:18–42  </p>
+<p><strong>Shabbat Service</strong> — 10:00 AM (PDT)<br>Livestream: <a href="https://www.shuvahyisrael.org">www.shuvahyisrael.org</a> · <a href="https://www.youtube.com/@ShuvahYisrael">YouTube</a><br>Email: <a href="mailto:info@shuvahyisrael.org">info@shuvahyisrael.org</a></p>
+<h3>Service Order</h3>
+<ol>
+<li>Songs of Worship  </li>
+<li>Hebrew Liturgy  </li>
+<li>Scripture Reading: Genesis 3:6–11 and Romans 5:12–19  </li>
+<li>Announcements &amp; Offering  </li>
+<li>Songs of Worship <em>(Children dismissed for Shabbat School)</em>  </li>
+<li><strong>Message:</strong> Messiah on Trial: Who Does the Tanakh Say He Is? · James Reppert, Guest Speaker  </li>
+<li>Closing Benediction</li>
+</ol>
+<h3>Word for the Week · מילת השבוע</h3>
+<blockquote>
+<p>Either we live for the glory of God or we do not live at all — we merely exist.<br>— <strong>Romans 14:7–8</strong></p>
+</blockquote>
+<h3>Reading the Bible Together</h3>
+<p>1 Samuel 28 – 31 and 2 Samuel 1 – 3<br>James (Jacob) 1 – 5</p>
+<h3>Upcoming Events</h3>
+<ul>
+<li><strong>Sat, Oct 17</strong> — Hebrew Class, 8:15 AM – 9:15 AM, Building B  </li>
+<li><strong>Fri, Nov 6</strong> — Shabbat Dinner, 6:00 PM – 8:00 PM  </li>
+<li><strong>Sat, Dec 5</strong> — Hanukkah Service 10:00 AM &amp; Livestream Online, Holiday Nosh 8:50 AM</li>
+</ul>
+<h3>Guest speaker materials</h3>
+<p>James Reppert · Messianic Hope, Inc.</p>
+<ul>
+<li><a href="https://dnoff.github.io/Weekly-Message---Shuvah-Yisrael/downloads/messiah-on-trial.pptx">Download full presentation (PowerPoint)</a>  </li>
+<li>Further study: <a href="https://Turn2Moshiach.org">Turn2Moshiach.org</a> · <a href="https://MessianicGO.org">MessianicGO.org</a></li>
+</ul>
+<hr>
+<h2>Message Outline</h2>
+<p><em>Messiah on Trial — Who Does the Tanakh Say He Is?</em><br>James Reppert · Messianic Hope, Inc. · October 10, 2026</p>
+<p><strong>Main Idea:</strong> The Tanakh itself puts Messiah on trial — and the evidence leaves a verdict for each of us.</p>
+<nav class="outline-legend" aria-label="Message outline">
+    <p>Jump to a section</p>
+    <div><a href="#outline-i"><span>I</span>Foundation — Does God even work this way?</a><a href="#outline-ii"><span>II</span>The first testimony — A promise planted in the Torah</a><a href="#outline-iii"><span>III</span>The identity exhibits — Who is this Person?</a><a href="#outline-iv"><span>IV</span>The charge — Who is really on trial?</a><a href="#outline-v"><span>V</span>The suffering exhibits — The most contested testimony</a><a href="#outline-vi"><span>VI</span>The blood provision — Why is bloodshed necessary?</a><a href="#outline-vii"><span>VII</span>Resurrection &amp; reign — Suffering before glory</a><a href="#outline-viii"><span>VIII</span>The year 70 CE — What happened when the Temple fell</a><a href="#outline-ix"><span>IX</span>Cross-examination — The rival explanation</a><a href="#outline-x"><span>X</span>Closing argument — Has the evidence been clear and convincing?</a><a href="#outline-xi"><span>XI</span>The verdict — Naming the witness</a><a href="#outline-xii"><span>XII</span>Your verdict — The jury renders a verdict</a></div>
+  </nav><h3 id="outline-i" class="outline-point"><span class="outline-marker">I</span><span>Foundation — Does God even work this way?</span></h3>
+<p>The God of Abraham, Isaac, and Jacob has always drawn near to His people through a Person.</p>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>The burning bush</span></h4>
+<p><strong>Exodus 3:2, 4, 6</strong><br>2 The angel of the LORD appeared to him in a blazing fire from the midst of a bush. 4 … “Moses, Moses!” … 6 “I am the God of your father, the God of Abraham, the God of Isaac, and the God of Jacob.”</p>
+<p><em>The angel of the LORD is called “God” from the bush.</em></p>
+<p><strong>Exodus 23:20–21</strong><br>20 “Behold, I am going to send an angel before you to guard you along the way and to bring you into the place which I have prepared. 21 Be on your guard before him and obey his voice; do not be rebellious toward him, for he will not pardon your transgression, since My name is in him.”</p>
+<p><em>An angel who bears God’s own Name.</em></p>
+<h4 class="outline-sub"><span class="outline-letter">B</span><span>Hagar</span></h4>
+<p><strong>Genesis 16:13</strong><br>13 Then she called the name of the LORD who spoke to her, “You are a God who sees.”</p>
+<p><em>Hagar meets “the angel of the LORD” and names Him God.</em></p>
+<h4 class="outline-sub"><span class="outline-letter">C</span><span>The LORD’s commander</span></h4>
+<p><strong>Joshua 5:13–15</strong><br>13 … “Are you for us or for our adversaries?” 14 He said, “No; rather I indeed come now as captain of the host of the LORD.” … 15 … “Remove your sandals from your feet, for the place where you are standing is holy.”</p>
+<p><em>Joshua bows down, and the visitor does not correct him.</em></p>
+<p><strong>Joshua 6:2</strong><br>2 The LORD said to Joshua, “See, I have given Jericho into your hand, with its king and the valiant warriors.”</p>
+<p><em>The captain of the LORD’s host becomes, without a seam, the LORD.</em></p>
+<h4 class="outline-sub"><span class="outline-letter">D</span><span>Abraham and Jacob</span></h4>
+<p><strong>Genesis 18:1, 22, 25</strong><br>1 Now the LORD appeared to him by the oaks of Mamre. … 22 Abraham was still standing before the LORD. … 25 “Shall not the Judge of all the earth deal justly?”</p>
+<p><em>Abraham sees three men; the Torah says “the LORD appeared.”</em></p>
+<p><strong>Genesis 19:24</strong><br>24 Then the LORD rained on Sodom and Gomorrah brimstone and fire from the LORD out of heaven.</p>
+<p><em>The LORD on the earth, and the LORD in heaven.</em></p>
+<p><strong>Genesis 32:28, 30</strong><br>28 “For you have striven with God and with men and have prevailed.” … 30 “I have seen God face to face, yet my life has been preserved.”</p>
+<p><em>Jacob wrestles through the night at the Jabbok.</em></p>
+<p><strong>Hosea 12:4–5</strong><br>4 … He wrestled with the angel and prevailed; He wept and sought His favor. … 5 Even the LORD, the God of hosts, the LORD is His name.</p>
+<p><em>Hosea himself calls the One Jacob met “the LORD.”</em></p>
+<h3 id="outline-ii" class="outline-point"><span class="outline-marker">II</span><span>The first testimony — A promise planted in the Torah</span></h3>
+<p>From Moriah to Shiloh, the Torah plants a promise of provision and a ruler from Judah.</p>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>The binding of Isaac</span></h4>
+<p><strong>Genesis 22:7–8, 14</strong><br>7 “Behold, the fire and the wood, but where is the lamb for the burnt offering?” 8 Abraham said, “God will provide for Himself the lamb for the burnt offering, my son.” … 14 … “In the mount of the LORD it will be provided.”</p>
+<p><em>A promise spoken on Mount Moriah, waiting for its provision.</em></p>
+<h4 class="outline-sub"><span class="outline-letter">B</span><span>Shiloh and the star</span></h4>
+<p><strong>Genesis 49:10</strong><br>10 “The scepter shall not depart from Judah, nor the ruler’s staff from between his feet, until Shiloh comes, and to him shall be the obedience of the peoples.”</p>
+<p><em>Jacob’s dying blessing of Judah.</em></p>
+<p><strong>Numbers 24:17</strong><br>17 “I see him, but not now; I behold him, but not near; a star shall come forth from Jacob, a scepter shall rise from Israel.”</p>
+<p><em>A Gentile prophet, hired to curse, sees the same ruler.</em></p>
+<h3 id="outline-iii" class="outline-point"><span class="outline-marker">III</span><span>The identity exhibits — Who is this Person?</span></h3>
+<p>Is He simply a gifted man, a wise king, and nothing more?</p>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>Mighty God</span></h4>
+<p><strong>Isaiah 9:6–7</strong><br>6 For a child will be born to us, a son will be given to us; and the government will rest on His shoulders; and His name will be called Wonderful Counselor, Mighty God, Eternal Father, Prince of Peace. 7 There will be no end to the increase of His government or of peace, on the throne of David and over his kingdom, to establish it and to uphold it with justice and righteousness from then on and forevermore. The zeal of the LORD of hosts will accomplish this.</p>
+<p><em>A child, fully human, carrying titles that belong to God alone — an everlasting government on David’s throne.</em></p>
+<h4 class="outline-sub"><span class="outline-letter">B</span><span>Bethlehem</span></h4>
+<p><strong>Micah 5:2</strong><br>2 “But as for you, Bethlehem Ephrathah, too little to be among the clans of Judah, from you One will go forth for Me to be ruler in Israel. His goings forth are from long ago, from the days of eternity.”</p>
+<p><em>Born in Bethlehem, yet from the days of eternity.</em></p>
+<h4 class="outline-sub"><span class="outline-letter">C</span><span>David’s Lord</span></h4>
+<p><strong>Psalm 110:1</strong><br>1 The LORD says to my Lord: “Sit at My right hand until I make Your enemies a footstool for Your feet.”</p>
+<p><em>David calls someone his own Lord.</em></p>
+<h4 class="outline-sub"><span class="outline-letter">D</span><span>The Son of Man</span></h4>
+<p><strong>Daniel 7:13–14</strong><br>13 “And behold, with the clouds of heaven One like a Son of Man was coming, and He came up to the Ancient of Days and was presented before Him. 14 And to Him was given dominion, glory and a kingdom, that all the peoples, nations, and men of every language might serve Him. His dominion is an everlasting dominion which will not pass away; and His kingdom is one which will not be destroyed.”</p>
+<p><em>A Man in the presence of God, given an everlasting kingdom.</em></p>
+<h3 id="outline-iv" class="outline-point"><span class="outline-marker">IV</span><span>The charge — Who is really on trial?</span></h3>
+<p>Not the Messiah. You. Me. Every one of us. What has God done about the charge against me?</p>
+<p><strong>Ecclesiastes 7:20</strong><br>20 Indeed, there is not a righteous man on earth who continually does good and who never sins.</p>
+<p><em>Solomon: the charge is universal.</em></p>
+<p><strong>Isaiah 64:6</strong><br>6 For all of us have become like one who is unclean, and all our righteous deeds are like a filthy garment.</p>
+<p><em>Not our sins only, but our righteous deeds.</em></p>
+<p><strong>Jeremiah 17:9</strong><br>9 “The heart is more deceitful than all else and is desperately sick; who can understand it?”</p>
+<p><em>Jewish kings and prophets, speaking about themselves.</em></p>
+<h3 id="outline-v" class="outline-point"><span class="outline-marker">V</span><span>The suffering exhibits — The most contested testimony</span></h3>
+<p>The suffering Servant, the pierced One, and the timing of Daniel 9.</p>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>The suffering Servant</span></h4>
+<p><strong>Isaiah 53:3–9</strong><br>3 He was despised and forsaken of men, a man of sorrows and acquainted with grief; and like one from whom men hide their face He was despised, and we did not esteem Him. 4 Surely our griefs He Himself bore, and our sorrows He carried; yet we ourselves esteemed Him stricken, smitten of God, and afflicted. 5 But He was pierced through for our transgressions, He was crushed for our iniquities; the chastening for our well-being fell upon Him, and by His scourging we are healed. 6 All of us like sheep have gone astray, each of us has turned to his own way; but the LORD has caused the iniquity of us all to fall on Him. 7 He was oppressed and He was afflicted, yet He did not open His mouth; like a lamb that is led to slaughter, and like a sheep that is silent before its shearers, so He did not open His mouth. 8 By oppression and judgment He was taken away; and as for His generation, who considered that He was cut off out of the land of the living for the transgression of my people, to whom the stroke was due? 9 His grave was assigned with wicked men, yet He was with a rich man in His death, because He had done no violence, nor was there any deceit in His mouth.</p>
+<p><em>The jury got it wrong: He was bearing our case. Cut off “for the transgression of my people.”</em></p>
+<p><strong>Isaiah 49:3, 5–6</strong><br>The Servant is called “Israel.” … Formed “from the womb to be His Servant, to bring Jacob back to Him, so that Israel might be gathered to Him.”</p>
+<p><em>The Servant can’t be both brought back and the one bringing.</em></p>
+<p><strong>Isaiah 53:10–12</strong><br>10 … After His life is made “a guilt offering,” He will “see His offspring,” He will “prolong His days.” 11 As a result of the anguish of His soul, He will see it and be satisfied. … 12 … He “poured out Himself to death,” and yet He “bore the sin of many, and interceded for the transgressors.”</p>
+<p><em>Cut off in verse 8; alive again, with a future, in verse 10. A dead man doesn’t intercede. This Servant does.</em></p>
+<h4 class="outline-sub"><span class="outline-letter">B</span><span>The pierced One</span></h4>
+<p><strong>Zechariah 12:10</strong><br>10 “They will look on Me whom they have pierced.”</p>
+<p><em>God speaks in the first person: “Me.”</em></p>
+<h4 class="outline-sub"><span class="outline-letter">C</span><span>The timing</span></h4>
+<p><strong>Daniel 9:26</strong><br>26 “The Messiah will be cut off and have nothing,” … “the people of the prince who is to come will destroy the city and the sanctuary.”</p>
+<p><em>The Anointed One is cut off before the Temple falls in 70.</em></p>
+<h3 id="outline-vi" class="outline-point"><span class="outline-marker">VI</span><span>The blood provision — Why is bloodshed necessary?</span></h3>
+<p>Atonement, in the Torah’s own words, is God’s gift, not man’s achievement.</p>
+<p><strong>Leviticus 17:11</strong><br>11 “For the life of the flesh is in the blood, and I have given it to you on the altar to make atonement for your souls; for it is the blood by reason of the life that makes atonement.”</p>
+<h3 id="outline-vii" class="outline-point"><span class="outline-marker">VII</span><span>Resurrection &amp; reign — Suffering before glory</span></h3>
+<p>If the Servant dies bearing our sin, the Tanakh must also testify to resurrection and reign.</p>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>Psalm 16</span></h4>
+<p><strong>Psalm 16:10</strong><br>10 For You will not abandon my soul to Sheol; nor will You allow Your Holy One to undergo decay.</p>
+<p><em>The Tanakh testifies to resurrection.</em></p>
+<h4 class="outline-sub"><span class="outline-letter">B</span><span>Job</span></h4>
+<p><strong>Job 19:25–26</strong><br>25 “As for me, I know that my Redeemer lives, and at the last He will take His stand on the earth. 26 Even after my skin is destroyed, yet from my flesh I shall see God.”</p>
+<p><em>Job expected to see God in his own flesh after death.</em></p>
+<h4 class="outline-sub"><span class="outline-letter">C</span><span>The resurrection</span></h4>
+<p><strong>Daniel 12:2–3</strong><br>2 “Many of those who sleep in the dust of the ground will awake, these to everlasting life, but the others to disgrace and everlasting contempt. 3 Those who have insight will shine brightly like the brightness of the expanse of heaven, and those who lead the many to righteousness, like the stars forever and ever.”</p>
+<h4 class="outline-sub"><span class="outline-letter">D</span><span>The kingdom of peace</span></h4>
+<p><strong>Isaiah 11:6, 9</strong><br>6 And the wolf will dwell with the lamb, and the leopard will lie down with the young goat, and the calf and the young lion and the fatling together; and a little boy will lead them. … 9 They will not hurt or destroy in all My holy mountain, for the earth will be full of the knowledge of the LORD as the waters cover the sea.</p>
+<p><em>The suffering before the glory: Isaiah 53 before Isaiah 11.</em></p>
+<h3 id="outline-viii" class="outline-point"><span class="outline-marker">VIII</span><span>The year 70 CE — What happened when the Temple fell</span></h3>
+<p>The Temple was destroyed, and the altar with it. Our own prophets promised something more.</p>
+<p><strong>Hosea 6:6</strong><br>6 “I delight in loyalty rather than sacrifice.”</p>
+<p><em>The rabbinic answer after the Temple fell.</em></p>
+<p><strong>Jeremiah 31:31–34</strong><br>31 “Behold, days are coming,” declares the LORD, “when I will make a new covenant with the house of Israel and with the house of Judah … 33 I will put My law within them and on their heart, I will write it; and I will be their God, and they shall be My people. 34 They will not teach again, each man his neighbor and each man his brother, saying, ‘Know the LORD,’ for they will all know Me, from the least of them to the greatest of them,” declares the LORD, “for I will forgive their iniquity, and their sin I will remember no more.”</p>
+<p><em>Promised before the Temple fell, while the altar still burned. A covenant written on the heart. The ground of it: “I will forgive.”</em></p>
+<p><strong>Ezekiel 36:26</strong><br>26 “Moreover, I will give you a new heart and put a new spirit within you; and I will remove the heart of stone from your flesh and give you a heart of flesh.”</p>
+<p><em>Not a system, but a relationship.</em></p>
+<h3 id="outline-ix" class="outline-point"><span class="outline-marker">IX</span><span>Cross-examination — The rival explanation</span></h3>
+<p>“My own efforts and my people are enough.” Let’s put the rival explanation to the Tanakh.</p>
+<p><strong>Micah 6:8</strong><br>8 He has told you, O man, what is good; and what does the LORD require of you but to do justice, to love kindness, and to walk humbly with your God?</p>
+<p><strong>Micah 7:18–19</strong><br>18 Who is a God like You, who pardons iniquity and passes over the rebellious act of the remnant of His possession? … 19 He will again have compassion on us; He will tread our iniquities under foot. Yes, You will cast all their sins into the depths of the sea.</p>
+<p><em>“He will.” Not “we will.”</em></p>
+<p><strong>Psalm 49:7–8, 15</strong><br>7 No man can by any means redeem his brother or give to God a ransom for him — 8 for the redemption of his soul is costly, and he should cease trying forever. … 15 But God will redeem my soul from the power of Sheol, for He will receive me.</p>
+<p><em>Not “hard.” Costly. The turn: God Himself will redeem.</em></p>
+<h3 id="outline-x" class="outline-point"><span class="outline-marker">X</span><span>Closing argument — Has the evidence been clear and convincing?</span></h3>
+<p>A Messiah-Redeemer, divine and human, suffering and reigning, pierced and yet alive.</p>
+<h3 id="outline-xi" class="outline-point"><span class="outline-marker">XI</span><span>The verdict — Naming the witness</span></h3>
+<p>So, who is He? The Tanakh leaves us a clue to His name.</p>
+<p><strong>Isaiah 12:2</strong><br>2 “Behold, God is my salvation, I will trust and not be afraid; for the LORD GOD is my strength and song, and He has become my salvation.”</p>
+<p><em>The LORD Himself becomes our yeshuah, our salvation.</em></p>
+<p><strong>Psalm 118:21–22, 26</strong><br>21 I shall give thanks to You, for You have answered me, and You have become my salvation. 22 The stone which the builders rejected has become the chief corner stone. … 26 Blessed is the one who comes in the name of the LORD.</p>
+<p><em>Sung at every Passover table. A rejected stone, and One who comes in the LORD’s name.</em></p>
+<p><strong>Psalm 110:4</strong><br>4 “A priest forever according to the order of Melchizedek.”</p>
+<p><em>A priesthood older than Aaron’s.</em></p>
+<h3 id="outline-xii" class="outline-point"><span class="outline-marker">XII</span><span>Your verdict — The jury renders a verdict</span></h3>
+<p>None of our own efforts was ever the remedy. The remedy is a gift: return, not earn.</p>
+<p><strong>Isaiah 55:1–3, 7</strong><br>1 “Ho! Every one who thirsts, come to the waters; and you who have no money come, buy and eat. Come, buy wine and milk without money and without cost. … 3 Incline your ear and come to Me. Listen, that you may live.” … 7 Let the wicked forsake his way and the unrighteous man his thoughts; and let him return to the LORD, and He will have compassion on him, and to our God, for He will abundantly pardon.</p>
+<p><em>Without money. Without cost. Return. Not earn. Return.</em></p>
+<p><strong>Genesis 15:6</strong><br>6 Then he believed in the LORD; and He reckoned it to him as righteousness.</p>
+<p><em>Emunah: trust.</em></p>
+<p><strong>Habakkuk 2:4</strong><br>4 “But the righteous will live by his faith.”</p>
+<p><em>Faith takes hold of what God has provided.</em></p>
+<p><strong>Ezekiel 33:11</strong><br>11 “As I live!” declares the Lord GOD, “I take no pleasure in the death of the wicked, but rather that the wicked turn from his way and live. Turn back, turn back from your evil ways! Why then will you die, O house of Israel?”</p>
+<p><em>The heart of the One who gave the evidence.</em></p>
+<p><strong>Joel 2:12–13</strong><br>12 “Yet even now,” declares the LORD, “Return to Me with all your heart, and with fasting, weeping and mourning; 13 and rend your heart and not your garments.” Now return to the LORD your God, for He is gracious and compassionate, slow to anger, abounding in lovingkindness and relenting of evil.</p>
+<p><em>That is who is asking you this morning.</em></p>
+<hr>
+<h3>Welcome · ברוך הבא</h3>
+<p>If you are new to Shuvah Yisrael, we welcome you. Please ask one of the leaders after service, or contact us at <a href="mailto:info@shuvahyisrael.org">info@shuvahyisrael.org</a>.</p>
+<p><em>Guest speaker: James Reppert · Messianic Hope, Inc.</em><br><em>Messianic Rabbi: Larry Feldman</em></p>
+
+    </article>
+  </main>
+</body>
+</html>
