@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ezekiel 37 — Vision of the Valley of Dry Bones · Shuvah Yisrael</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <style>:root {
+  --ink: #1a2e28;
+  --muted: #4a5c56;
+  --paper: #f3f6f4;
+  --sheet: #fafcfb;
+  --accent: #0f6b5c;
+  --accent-soft: #d7ebe5;
+  --line: #c9d6d1;
+  --shadow: 0 18px 50px rgba(26, 46, 40, 0.12);
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Source Sans 3", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.55;
+}
+
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 80% 50% at 10% -10%, #cfe8df 0%, transparent 55%),
+    radial-gradient(ellipse 70% 45% at 100% 0%, #d9e4f0 0%, transparent 50%),
+    linear-gradient(165deg, #e8f0ec 0%, #eef2f5 45%, #e6ebe8 100%);
+}
+
+.sheet {
+  width: min(42rem, calc(100% - 2rem));
+  margin: 1.5rem auto 3rem;
+  padding: 1.75rem 1.5rem 2.25rem;
+  background: color-mix(in srgb, var(--sheet) 92%, white);
+  border: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+  box-shadow: var(--shadow);
+  animation: rise 0.55s ease-out both;
+}
+
+@media (min-width: 640px) {
+  .sheet {
+    margin-top: 2.5rem;
+    padding: 2.5rem 2.75rem 3rem;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.top {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.65rem, 4vw, 2.15rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  animation: fade 0.7s ease 0.1s both;
+}
+
+.badge {
+  display: inline-block;
+  margin: 0 0 0.65rem;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-soft);
+  animation: fade 0.7s ease 0.15s both;
+}
+
+.badge-archive {
+  color: var(--muted);
+  background: #e4e9e7;
+}
+
+.top h1 {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 3.2vw, 1.75rem);
+  font-weight: 500;
+  line-height: 1.25;
+  animation: fade 0.7s ease 0.2s both;
+}
+
+.meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  animation: fade 0.7s ease 0.25s both;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.content {
+  font-size: 1.05rem;
+}
+
+.content > *:first-child {
+  margin-top: 0;
+}
+
+.content h2 {
+  margin: 1.75rem 0 0.65rem;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.content h3 {
+  margin: 1.35rem 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.content h4 {
+  margin: 1.35rem 0 0.5rem;
+  font-size: 1rem;
+}
+
+.outline-legend {
+  margin: 1.75rem 0 2rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.outline-legend p {
+  margin: 0 0 0.7rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.outline-legend div {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.content .outline-legend a {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 0.65rem;
+  color: var(--ink);
+  text-decoration: none;
+  background: var(--accent-soft);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.content .outline-legend a:hover {
+  background: color-mix(in srgb, var(--accent-soft) 72%, white);
+  transform: translateX(2px);
+}
+
+.outline-legend a span {
+  flex: none;
+  min-width: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  background: var(--accent);
+}
+
+.content .outline-point {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 2.5rem 0 1rem;
+  padding-top: 1.1rem;
+  scroll-margin-top: 1rem;
+  border-top: 2px solid var(--accent-soft);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.outline-marker {
+  flex: none;
+  min-width: 2.6rem;
+  padding: 0.3rem 0.55rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #fff;
+  background: var(--accent);
+}
+
+.content .outline-sub {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 1.75rem 0 0.75rem;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.outline-letter {
+  flex: none;
+  min-width: 1.9rem;
+  padding: 0.22rem 0.45rem;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--accent);
+  background: var(--accent-soft);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+
+.content p,
+.content li {
+  color: var(--ink);
+}
+
+.content a {
+  color: var(--accent);
+  text-underline-offset: 2px;
+}
+
+.content ul,
+.content ol {
+  padding-left: 1.25rem;
+}
+
+.content li + li {
+  margin-top: 0.35rem;
+}
+
+.content code {
+  font-size: 0.9em;
+  padding: 0.1em 0.35em;
+  background: #e8eeeb;
+}
+
+.content blockquote {
+  margin: 1.25rem 0;
+  padding: 0.85rem 1rem;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+.content blockquote p {
+  margin: 0;
+}
+
+.content a[href*="downloads/"] {
+  font-weight: 600;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-weight: 600;
+}
+
+.nav-top {
+  margin: 0 0 1.25rem;
+  padding: 0 0 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.nav a {
+  color: var(--accent);
+  text-decoration: none;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.nav a:hover {
+  border-color: var(--accent);
+}
+
+.nav a.nav-current {
+  color: var(--ink);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.week-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.week-list li + li {
+  margin-top: 0.75rem;
+}
+
+.week-list a {
+  display: grid;
+  gap: 0.15rem;
+  padding: 1rem 1.1rem;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--line);
+  background: #fff;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.week-list a:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.week-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.week-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.week-date {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+</style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <main class="sheet">
+    <nav class="nav nav-top">
+        <a href="../">This week</a>
+        <a href="./">Past weeks</a>
+      </nav>
+    <header class="top">
+      <p class="brand">Shuvah Yisrael</p>
+      <p class="badge badge-archive">Archive</p>
+      <h1>Ezekiel 37 — Vision of the Valley of Dry Bones</h1>
+      <p class="meta">Henry Monreal · Guest Speaker · Week of October 17, 2026 · 6 Cheshvan 5787</p>
+    </header>
+    <article class="content">
+      <h2>Shabbat at Shuvah Yisrael</h2>
+<p><strong>Parashat Noach</strong> · פרשת נח<br><strong>Torah:</strong> Genesis 6:9 – 11:32<br><strong>Haftarah:</strong> Isaiah 54:1 – 55:5  </p>
+<p><strong>Shabbat Service</strong> — 10:00 AM (PDT)<br>Livestream: <a href="https://www.shuvahyisrael.org">www.shuvahyisrael.org</a> · <a href="https://www.youtube.com/@ShuvahYisrael">YouTube</a><br>Email: <a href="mailto:info@shuvahyisrael.org">info@shuvahyisrael.org</a></p>
+<h3>Service Order</h3>
+<ol>
+<li>Songs of Worship  </li>
+<li>Hebrew Liturgy  </li>
+<li>Scripture Reading: Genesis 8:15–22 and Ephesians 2:4–10  </li>
+<li>Announcements &amp; Offering  </li>
+<li>Songs of Worship <em>(Children dismissed for Shabbat School)</em>  </li>
+<li><strong>Message:</strong> Ezekiel 37 – Vision of the Valley of Dry Bones · Henry Monreal, Guest Speaker  </li>
+<li>Closing Benediction</li>
+</ol>
+<h3>Word for the Week · מילת השבוע</h3>
+<blockquote>
+<p>Problem: Man putting himself in the place God deserves.<br>Good News: God putting Himself in the place man deserves.<br>— <strong>Romans 5:6–11</strong></p>
+</blockquote>
+<h3>Reading the Bible Together</h3>
+<p>2 Samuel 4 – 10<br>James (Jacob) 1 – 5</p>
+<h3>Upcoming Events</h3>
+<ul>
+<li><strong>Sat, Oct 17</strong> — Hebrew Class, 8:15 AM – 9:15 AM, Building B  </li>
+<li><strong>Fri, Nov 6</strong> — Shabbat Dinner, 6:00 PM – 8:00 PM  </li>
+<li><strong>Sat, Dec 5</strong> — Hanukkah Service 10:00 AM &amp; Livestream Online, Holiday Nosh 8:50 AM  </li>
+<li><strong>Sat, Dec 12</strong> — Hanukkah Luncheon, 12:30 PM – 3:00 PM, Building B</li>
+</ul>
+<h3>Guest speaker materials</h3>
+<p>Henry Monreal, Guest Speaker</p>
+<ul>
+<li><a href="https://dnoff.github.io/Weekly-Message---Shuvah-Yisrael/downloads/ezekiel-37-dry-bones.pptx">Download presentation (PowerPoint)</a></li>
+</ul>
+<hr>
+<h2>Message Outline</h2>
+<p><em>Ezekiel 37 — Vision of the Valley of Dry Bones</em><br><em>The Promise of the Lord for His Nation</em><br>Henry Monreal · October 17, 2026 · 6 Cheshvan 5787</p>
+<p><strong>Main Idea:</strong> God promises to restore His nation — dry bones made alive by His Spirit, under one King, Yeshua.</p>
+<nav class="outline-legend" aria-label="Message outline">
+    <p>Jump to a section</p>
+    <div><a href="#outline-i"><span>I</span>Vision of Dry Bones</a><a href="#outline-ii"><span>II</span>Meaning of the Vision</a><a href="#outline-iii"><span>III</span>Accusations toward Israel</a><a href="#outline-iv"><span>IV</span>Response we should have</a></div>
+  </nav><h3 id="outline-i" class="outline-point"><span class="outline-marker">I</span><span>Vision of Dry Bones</span></h3>
+<p><strong>Ezekiel 37:1–3</strong><br>1 The hand of ADONAI was upon me. The Ruach ADONAI carried me out and set me down in the middle of the valley. It was full of bones. 2 He led me all around them. Behold, there were very many on the floor of the valley. Behold, they were very dry. 3 Then He said to me, “Son of man, can these bones live?” I answered, “ADONAI Elohim, You know.”</p>
+<p>What can we understand from this?</p>
+<ul>
+<li>First this is a <strong>vision</strong>, of things to <strong>come</strong>.  </li>
+<li>There are <strong>many bones</strong>, and they are <strong>very dry</strong>.  </li>
+<li>The bones are <strong>spread out</strong>, all in the <strong>valley</strong>.  </li>
+<li>To be <strong>very dry</strong> is to be long <strong>dead</strong> — no flesh or tendons, only full <strong>death</strong>.</li>
+</ul>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>God Himself poses the question</span></h4>
+<p><strong>Ezekiel 37:3–6</strong><br>3 Then He said to me, “Son of man, can these bones live?” I answered, “ADONAI Elohim, You know.” 4 “Prophesy over these bones,” He said to me. “Say to them: ‘Dry bones, hear the word of ADONAI!’ 5 Thus says ADONAI Elohim to these bones: ‘Behold, I will cause Ruach to enter you, so you will live. 6 I will attach tendons to you, bring flesh on you and cover you with skin. Then I will put breath in you. You will live. You will know that I am ADONAI.’”</p>
+<ul>
+<li>The Lord <strong>directly</strong> asks: Can these <strong>bones</strong> come to life?  </li>
+<li>It seems <strong>impossible</strong>. “Lord, You know” is a simple way for Ezekiel to <strong>leave</strong> it in His hands.  </li>
+<li>A <strong>promise</strong> is made by the Lord God, to <strong>reform</strong> the bones, to make them <strong>new</strong>.</li>
+</ul>
+<h4 class="outline-sub"><span class="outline-letter">B</span><span>The bones come together — flesh, yet no life</span></h4>
+<p><strong>Ezekiel 37:7–8</strong><br>7 So I prophesied just as I was commanded. As I prophesied, there was a noise, and behold, an earthquake. Then the bones came together, bone to its bone. 8 I saw, and behold, there were tendons on them, flesh came up and skin covered them above, but there was no breath in them.</p>
+<h4 class="outline-sub"><span class="outline-letter">C</span><span>The life is in the breath</span></h4>
+<p>Life is not given to the bones <strong>until</strong> the breath of God goes forth and life is <strong>restored</strong> to the body. Though with flesh and tendons after being apart, still no life until breath.</p>
+<p><strong>Ezekiel 37:9–10</strong><br>9 Then He said to me, “Prophesy to the Ruach. Prophesy, son of man, and say to the Ruach, thus says ADONAI Elohim: ‘Come from the four winds, Ruach! Breathe upon these slain, that they may live.’” 10 So I prophesied just as He commanded me. The Ruach came into them and they lived. They stood up on their feet, a vast army.</p>
+<h3 id="outline-ii" class="outline-point"><span class="outline-marker">II</span><span>Meaning of the Vision</span></h3>
+<p>The meaning of the vision is given from <strong>Ezekiel 37:11–23</strong>.</p>
+<ul>
+<li>A <strong>promise</strong> that the nation will return after <strong>exile</strong>.  </li>
+<li>Which exile? Some believe it is the exile from <strong>Babylon</strong>.  </li>
+<li>It cannot be. Why? Because their <strong>sins</strong> are <strong>forgiven</strong> and <strong>one king</strong> rules over them.  </li>
+<li>This did not happen on their return. No <strong>King of David</strong> has been seen — except Yeshua.</li>
+</ul>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>Yeshua returns to save and reign</span></h4>
+<p><strong>Ezekiel 37:24</strong><br>24 “My servant David will be king over them. They will all have One Shepherd. They will walk in My ordinances and observe My rulings and do them.”</p>
+<p>Yeshua returns to reign, a king set over Israel <strong>forever</strong>.</p>
+<p><strong>Zechariah 14:9</strong><br>9 ADONAI will then be King over all the earth. In that day ADONAI will be Echad and His Name Echad.</p>
+<p><strong>Revelation 22:3–5</strong><br>3 No longer will there be any curse. The throne of God and of the Lamb shall be in the city, and His servants shall serve Him. 4 They shall see His face, and His name shall be on their foreheads. 5 Night shall be no more, and people will have no need for lamplight or sunlight — for ADONAI Elohim will shine on them. And they shall reign forever and ever!</p>
+<h3 id="outline-iii" class="outline-point"><span class="outline-marker">III</span><span>Accusations toward Israel</span></h3>
+<p>With all these verses many question: why is the nation of Israel in <strong>unbelief</strong>? If they <strong>returned</strong>, why <strong>stay</strong> this way? Because this is <strong>part</strong> of God’s <strong>plan</strong> for His <strong>people</strong>.</p>
+<p><strong>Zechariah 12:10</strong><br>10 “Then I will pour out on the house of David and the inhabitants of Jerusalem a spirit of grace and supplication, when they will look toward Me whom they pierced. They will mourn for him as one mourns for an only son and grieve bitterly for him, as one grieves for a firstborn.”</p>
+<p><strong>Romans 11:26–27</strong><br>26 and in this way all Israel will be saved, as it is written, “The Deliverer shall come out of Zion. He shall turn away ungodliness from Jacob. 27 And this is My covenant with them, when I take away their sins.”</p>
+<p><em>(Paul quotes Psalm 14:7 and Isaiah 27:9.)</em></p>
+<h3 id="outline-iv" class="outline-point"><span class="outline-marker">IV</span><span>Response we should have</span></h3>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>Trust in God’s plan</span></h4>
+<p><strong>Psalm 2:1, 12</strong><br>1 Why are the nations in an uproar, and the peoples mutter vanity?<br>12 Kiss the Son, lest He become angry, and you perish along your way — since His wrath may flare up suddenly. Happy is everyone taking refuge in Him!</p>
+<h4 class="outline-sub"><span class="outline-letter">B</span><span>Stand with Israel</span></h4>
+<p><strong>Psalm 122:6–9</strong><br>6 Pray for the peace of Jerusalem — “May those who love you be at peace! 7 May there be shalom within your walls — quietness within your palaces.” 8 For the sake of my brothers and friends, I now say: “Shalom be within you.” 9 For the sake of the House of ADONAI our God, I will seek your good.</p>
+<h4 class="outline-sub"><span class="outline-letter">C</span><span>Witness to the Jewish people</span></h4>
+<p><strong>Romans 11:11–12</strong><br>11 I say then, they did not stumble so as to fall, did they? May it never be! But by their false step salvation has come to the Gentiles, to provoke Israel to jealousy. 12 Now if their transgression leads to riches for the world, and their loss riches for the Gentiles, then how much more their fullness!</p>
+<hr>
+<h3>Welcome · ברוך הבא</h3>
+<p>If you are new to Shuvah Yisrael, we welcome you. Please ask one of the leaders after service, or contact us at <a href="mailto:info@shuvahyisrael.org">info@shuvahyisrael.org</a>.</p>
+<p><em>Guest speaker: Henry Monreal</em><br><em>Messianic Rabbi: Larry Feldman</em></p>
+
+    </article>
+  </main>
+</body>
+</html>
