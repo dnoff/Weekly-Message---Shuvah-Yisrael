@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yeshua’s Suffering and Humiliation (Part 1) · Shuvah Yisrael</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <style>:root {
+  --ink: #1a2e28;
+  --muted: #4a5c56;
+  --paper: #f3f6f4;
+  --sheet: #fafcfb;
+  --accent: #0f6b5c;
+  --accent-soft: #d7ebe5;
+  --line: #c9d6d1;
+  --shadow: 0 18px 50px rgba(26, 46, 40, 0.12);
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Source Sans 3", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.55;
+}
+
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 80% 50% at 10% -10%, #cfe8df 0%, transparent 55%),
+    radial-gradient(ellipse 70% 45% at 100% 0%, #d9e4f0 0%, transparent 50%),
+    linear-gradient(165deg, #e8f0ec 0%, #eef2f5 45%, #e6ebe8 100%);
+}
+
+.sheet {
+  width: min(42rem, calc(100% - 2rem));
+  margin: 1.5rem auto 3rem;
+  padding: 1.75rem 1.5rem 2.25rem;
+  background: color-mix(in srgb, var(--sheet) 92%, white);
+  border: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+  box-shadow: var(--shadow);
+  animation: rise 0.55s ease-out both;
+}
+
+@media (min-width: 640px) {
+  .sheet {
+    margin-top: 2.5rem;
+    padding: 2.5rem 2.75rem 3rem;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.top {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.65rem, 4vw, 2.15rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  animation: fade 0.7s ease 0.1s both;
+}
+
+.badge {
+  display: inline-block;
+  margin: 0 0 0.65rem;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-soft);
+  animation: fade 0.7s ease 0.15s both;
+}
+
+.badge-archive {
+  color: var(--muted);
+  background: #e4e9e7;
+}
+
+.top h1 {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 3.2vw, 1.75rem);
+  font-weight: 500;
+  line-height: 1.25;
+  animation: fade 0.7s ease 0.2s both;
+}
+
+.meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  animation: fade 0.7s ease 0.25s both;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.content {
+  font-size: 1.05rem;
+}
+
+.content > *:first-child {
+  margin-top: 0;
+}
+
+.content h2 {
+  margin: 1.75rem 0 0.65rem;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.content h3 {
+  margin: 1.35rem 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.content h4 {
+  margin: 1.35rem 0 0.5rem;
+  font-size: 1rem;
+}
+
+.outline-legend {
+  margin: 1.75rem 0 2rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.outline-legend p {
+  margin: 0 0 0.7rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.outline-legend div {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.content .outline-legend a {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 0.65rem;
+  color: var(--ink);
+  text-decoration: none;
+  background: var(--accent-soft);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.content .outline-legend a:hover {
+  background: color-mix(in srgb, var(--accent-soft) 72%, white);
+  transform: translateX(2px);
+}
+
+.outline-legend a span {
+  flex: none;
+  min-width: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  background: var(--accent);
+}
+
+.content .outline-point {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 2.5rem 0 1rem;
+  padding-top: 1.1rem;
+  scroll-margin-top: 1rem;
+  border-top: 2px solid var(--accent-soft);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.outline-marker {
+  flex: none;
+  min-width: 2.6rem;
+  padding: 0.3rem 0.55rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #fff;
+  background: var(--accent);
+}
+
+.content .outline-sub {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 1.75rem 0 0.75rem;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.outline-letter {
+  flex: none;
+  min-width: 1.9rem;
+  padding: 0.22rem 0.45rem;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--accent);
+  background: var(--accent-soft);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+
+.content p,
+.content li {
+  color: var(--ink);
+}
+
+.content a {
+  color: var(--accent);
+  text-underline-offset: 2px;
+}
+
+.content ul,
+.content ol {
+  padding-left: 1.25rem;
+}
+
+.content li + li {
+  margin-top: 0.35rem;
+}
+
+.content code {
+  font-size: 0.9em;
+  padding: 0.1em 0.35em;
+  background: #e8eeeb;
+}
+
+.content blockquote {
+  margin: 1.25rem 0;
+  padding: 0.85rem 1rem;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+.content blockquote p {
+  margin: 0;
+}
+
+.content a[href*="downloads/"] {
+  font-weight: 600;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-weight: 600;
+}
+
+.nav-top {
+  margin: 0 0 1.25rem;
+  padding: 0 0 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.nav a {
+  color: var(--accent);
+  text-decoration: none;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.nav a:hover {
+  border-color: var(--accent);
+}
+
+.nav a.nav-current {
+  color: var(--ink);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.week-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.week-list li + li {
+  margin-top: 0.75rem;
+}
+
+.week-list a {
+  display: grid;
+  gap: 0.15rem;
+  padding: 1rem 1.1rem;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--line);
+  background: #fff;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.week-list a:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.week-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.week-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.week-date {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+</style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <main class="sheet">
+    <nav class="nav nav-top">
+        <a href="../">This week</a>
+        <a href="./">Past weeks</a>
+      </nav>
+    <header class="top">
+      <p class="brand">Shuvah Yisrael</p>
+      <p class="badge badge-archive">Archive</p>
+      <h1>Yeshua’s Suffering and Humiliation (Part 1)</h1>
+      <p class="meta">Rabbi Larry Feldman · Week of October 31, 2026 · 20 Cheshvan 5787</p>
+    </header>
+    <article class="content">
+      <h2>Shabbat at Shuvah Yisrael</h2>
+<p><strong>Parashat Vayera</strong> · פרשת וירא<br><strong>Torah:</strong> Genesis 18:1 – 22:24<br><strong>Haftarah:</strong> 2 Kings 4:1–37  </p>
+<p><strong>Shabbat Service</strong> — 10:00 AM (PDT)<br>Livestream: <a href="https://www.shuvahyisrael.org">www.shuvahyisrael.org</a> · <a href="https://www.youtube.com/@ShuvahYisrael">YouTube</a><br>Email: <a href="mailto:info@shuvahyisrael.org">info@shuvahyisrael.org</a></p>
+<h3>Service Order</h3>
+<ol>
+<li>Songs of Worship  </li>
+<li>Hebrew Liturgy  </li>
+<li>Scripture Reading: Genesis 19:23–29 and Luke 17:28–33  </li>
+<li>Announcements &amp; Offering  </li>
+<li>Songs of Worship <em>(Children dismissed for Shabbat School)</em>  </li>
+<li><strong>Message:</strong> Yeshua’s Suffering and Humiliation — John 19:1–16 (Part 1) · Rabbi Larry Feldman  </li>
+<li>Closing Benediction</li>
+</ol>
+<h3>Word for the Week · מילת השבוע</h3>
+<blockquote>
+<p>Do not grow weary in prayer, even when the answer feels slow. Keep coming to God with an open heart — He hears and will answer at precisely the right moment.<br>— <strong>Luke 18:1</strong></p>
+</blockquote>
+<h3>Reading the Bible Together</h3>
+<p>2 Samuel 18 – 24<br>James (Jacob) 1 – 5</p>
+<h3>Upcoming Events</h3>
+<ul>
+<li><strong>Sat, Oct 31</strong> — Hebrew Class, 8:15 AM – 9:15 AM, Building B  </li>
+<li><strong>Sat, Oct 31</strong> — Membership Confirmation Class, 12:15 PM, Sanctuary  </li>
+<li><strong>Fri, Nov 6</strong> — Shabbat Dinner, 6:00 PM – 8:00 PM  </li>
+<li><strong>Sat, Dec 5</strong> — Hanukkah Service 10:00 AM &amp; Livestream Online, Holiday Nosh 8:50 AM  </li>
+<li><strong>Sat, Dec 12</strong> — Hanukkah Catered Luncheon, 12:30 PM – 3:00 PM, Building B (tickets required)</li>
+</ul>
+<hr>
+<h2>Message Outline</h2>
+<p><em>Yeshua’s Suffering and Humiliation — John 19:1–16 (Part 1)</em><br>Rabbi Larry Feldman · October 31, 2026 · 20 Cheshvan 5787</p>
+<p><strong>Main Idea:</strong> Despite suffering and humiliation, Yeshua is the obedient servant who fulfilled God’s will and prophecy.</p>
+<h3>Opening Scriptures</h3>
+<p><strong>Isaiah 53:3–6</strong><br>3 He was despised and forsaken of men, a man of sorrows and acquainted with grief; and like one from whom men hide their face He was despised, and we did not esteem Him. 4 Surely our griefs He Himself bore, and our sorrows He carried; yet we ourselves esteemed Him stricken, smitten of God, and afflicted. 5 But He was pierced through for our transgressions, He was crushed for our iniquities; the chastening for our well-being fell upon Him, and by His scourging we are healed. 6 All of us like sheep have gone astray, each of us has turned to his own way; but the LORD has caused the iniquity of us all to fall on Him.</p>
+<p><strong>Psalm 22:14–16</strong><br>14 I am poured out like water, and all my bones are out of joint; my heart is like wax; it is melted within me. 15 My strength is dried up like a potsherd, and my tongue cleaves to my jaws; and You lay me in the dust of death. 16 For dogs have surrounded me; a band of evildoers has encompassed me; they pierced my hands and my feet.</p>
+<nav class="outline-legend" aria-label="Message outline">
+    <p>Jump to a section</p>
+    <div><a href="#outline-i"><span>I</span>Yeshua’s humiliation and suffering</a><a href="#outline-ii"><span>II</span>Yeshua trusted God and submitted to His will</a></div>
+  </nav><h3 id="outline-i" class="outline-point"><span class="outline-marker">I</span><span>Yeshua’s humiliation and suffering</span></h3>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>Yeshua’s suffering</span></h4>
+<p><strong>John 19:1</strong><br>1 Pilate then took Yeshua and scourged Him.</p>
+<p><strong>John 19:2–3</strong><br>2 And the soldiers twisted together a crown of thorns and put it on His head, and put a purple robe on Him; 3 and they began to come up to Him and say, “Hail, King of the Jews!” and to give Him slaps in the face.</p>
+<p><strong>Philippians 2:5–8</strong><br>5 Have this attitude in yourselves which was also in Messiah Yeshua, 6 who, although He existed in the form of God, did not regard equality with God a thing to be grasped, 7 but emptied Himself, taking the form of a bond-servant, and being made in the likeness of men. 8 Being found in appearance as a man, He humbled Himself by becoming obedient to the point of death, even death on a cross.</p>
+<p><strong>Isaiah 50:4–10</strong><br>4 The Lord GOD has given Me the tongue of disciples, that I may know how to sustain the weary one with a word. He awakens Me morning by morning, He awakens My ear to listen as a disciple. 5 The Lord GOD has opened My ear; and I was not disobedient nor did I turn back. 6 I gave My back to those who strike Me, and My cheeks to those who pluck out the beard; I did not cover My face from humiliation and spitting. 7 For the Lord GOD helps Me, therefore I am not disgraced; therefore I have set My face like flint, and I know that I will not be ashamed. 8 He who vindicates Me is near; who will contend with Me? Let us stand up to each other; who has a case against Me? Let him draw near to Me. 9 Behold, the Lord GOD helps Me; who is he who condemns Me? Behold, they will all wear out like a garment; the moth will eat them. 10 Who is among you that fears the LORD, that obeys the voice of His servant, that walks in darkness and has no light? Let him trust in the name of the LORD and rely on his God.</p>
+<p><strong>Isaiah 53:7–9</strong><br>7 He was oppressed and He was afflicted, yet He did not open His mouth; like a lamb that is led to slaughter, and like a sheep that is silent before its shearers, so He did not open His mouth. 8 By oppression and judgment He was taken away; and as for His generation, who considered that He was cut off out of the land of the living for the transgression of my people, to whom the stroke was due? 9 His grave was assigned with wicked men, yet He was with a rich man in His death, because He had done no violence, nor was there any deceit in His mouth.</p>
+<h4 class="outline-sub"><span class="outline-letter">B</span><span>Pilate’s guilt</span></h4>
+<p><strong>John 19:4</strong><br>4 Pilate came out again and said to them, “Behold, I am bringing Him out to you so that you may know that I find no guilt in Him.”</p>
+<p><strong>John 19:5</strong><br>5 Yeshua then came out, wearing the crown of thorns and the purple robe. Pilate said to them, “Behold, the Man!”</p>
+<p><strong>Isaiah 52:13–15</strong><br>13 Behold, My servant will prosper, He will be high and lifted up and greatly exalted. 14 Just as many were astonished at you, My people, so His appearance was marred more than any man and His form more than the sons of men. 15 Thus He will sprinkle many nations, kings will shut their mouths on account of Him; for what had not been told them they will see, and what they had not heard they will understand.</p>
+<p><strong>Psalm 22:1–8</strong><br>1 My God, my God, why have You forsaken me? Far from my deliverance are the words of my groaning. 2 O my God, I cry by day, but You do not answer; and by night, but I have no rest. 3 Yet You are holy, O You who are enthroned upon the praises of Israel. 4 In You our fathers trusted; they trusted and You delivered them. 5 To You they cried out and were delivered; in You they trusted and were not disappointed. 6 But I am a worm and not a man, a reproach of men and despised by the people. 7 All who see me sneer at me; they separate with the lip, they wag the head, saying, 8 “Commit yourself to the LORD; let Him deliver him; let Him rescue him, because He delights in him.”</p>
+<h3 id="outline-ii" class="outline-point"><span class="outline-marker">II</span><span>Yeshua trusted God and submitted to His will</span></h3>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>Jewish leaders’ guilt</span></h4>
+<p><strong>John 19:6</strong><br>6 So when the chief priests and the officers saw Him, they cried out saying, “Crucify, crucify!” Pilate said to them, “Take Him yourselves and crucify Him, for I find no guilt in Him.”</p>
+<p><strong>Acts 2:22–23</strong><br>22 “Men of Israel, listen to these words: Yeshua the Nazarene, a man attested to you by God with miracles and wonders and signs which God performed through Him in your midst, just as you yourselves know — 23 this Man, delivered over by the predetermined plan and foreknowledge of God, you nailed to a cross by the hands of godless men and put Him to death.”</p>
+<p><strong>Acts 3:13–15</strong><br>13 “The God of Abraham, Isaac and Jacob, the God of our fathers, has glorified His servant Yeshua, the one whom you delivered and disowned in the presence of Pilate, when he had decided to release Him. 14 But you disowned the Holy and Righteous One and asked for a murderer to be granted to you, 15 but put to death the Prince of life, the one whom God raised from the dead, a fact to which we are witnesses.”</p>
+<p><strong>Acts 4:23–28</strong><br>23 When they had been released, they went to their own companions and reported all that the chief priests and the elders had said to them. 24 And when they heard this, they lifted their voices to God with one accord and said, “O Lord, it is You who MADE THE HEAVEN AND THE EARTH AND THE SEA, AND ALL THAT IS IN THEM, 25 who by the Holy Spirit, through the mouth of our father David Your servant, said, ‘WHY DID THE GENTILES RAGE, AND THE PEOPLES DEVISE FUTILE THINGS? 26 THE KINGS OF THE EARTH TOOK THEIR STAND, AND THE RULERS WERE GATHERED TOGETHER AGAINST THE LORD AND AGAINST HIS MESSIAH.’ 27 For truly in this city there were gathered together against Your holy servant Yeshua, whom You anointed, both Herod and Pontius Pilate, along with the Gentiles and the peoples of Israel, 28 to do whatever Your hand and Your purpose predestined to occur.”</p>
+<p><em>Part 2 continues next week from John 19:7.</em></p>
+<hr>
+<h3>Welcome · ברוך הבא</h3>
+<p>If you are new to Shuvah Yisrael, we welcome you. Please ask one of the leaders after service, or contact us at <a href="mailto:info@shuvahyisrael.org">info@shuvahyisrael.org</a>.</p>
+<p><em>Messianic Rabbi: Larry Feldman</em></p>
+
+    </article>
+  </main>
+</body>
+</html>
