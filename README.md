@@ -24,6 +24,17 @@ Then wait about a minute and refresh the website.
 | `docs/qr/weekly.png` | QR only |
 | `docs/qr/weekly-slide.png` | 1920×1080 slide with QR (for screens / PowerPoint) |
 
+## Simcha West
+
+A separate conference site, rebuilt with `npm run build`. Its QR is not the weekly one.
+
+| File | Use |
+|------|-----|
+| `docs/qr/simcha-west.png` | QR only |
+| `docs/qr/simcha-west-slide.png` | 1920×1080 slide with QR |
+
+The QR opens `https://dnoff.github.io/Weekly-Message---Shuvah-Yisrael/simcha-west/`. Session text lives in `simcha-west/sessions/`.
+
 ## First-time GitHub Pages setup
 
 1. Repo **Settings → Pages**

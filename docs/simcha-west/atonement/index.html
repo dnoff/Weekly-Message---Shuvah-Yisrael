@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Atonement from the Jewish Scriptures · Simcha West</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <style>:root {
+  --ink: #1c2430;
+  --muted: #5c6570;
+  --paper: #f4f0e8;
+  --sheet: #fbf9f5;
+  --navy: #0c2340;
+  --navy-soft: #e7eef6;
+  --gold: #9a7433;
+  --gold-soft: #f3e7cf;
+  --line: #e0d5c4;
+  --shadow: 0 18px 50px rgba(12, 35, 64, 0.12);
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-script: "Great Vibes", cursive;
+  --font-body: "Source Sans 3", "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.55;
+}
+
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 70% 40% at 0% -10%, #e7d7b4 0%, transparent 55%),
+    radial-gradient(ellipse 60% 40% at 100% 0%, #d5e2f0 0%, transparent 50%),
+    linear-gradient(165deg, #f7f3ea 0%, #f3efe6 50%, #ebe4d6 100%);
+}
+
+.sheet {
+  width: min(44rem, calc(100% - 2rem));
+  margin: 1.5rem auto 3rem;
+  padding: 1.75rem 1.5rem 2.25rem;
+  background: color-mix(in srgb, var(--sheet) 94%, white);
+  border: 1px solid color-mix(in srgb, var(--line) 80%, transparent);
+  box-shadow: var(--shadow);
+  animation: rise 0.55s ease-out both;
+}
+
+@media (min-width: 640px) {
+  .sheet {
+    margin-top: 2.5rem;
+    padding: 2.5rem 2.75rem 3rem;
+  }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 0 0 1.35rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+  font-weight: 600;
+}
+
+.nav a {
+  color: var(--navy);
+  text-decoration: none;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.nav a:hover { border-color: var(--gold); }
+
+.nav a.nav-current {
+  color: var(--navy);
+  border-color: var(--navy);
+  background: var(--navy-soft);
+}
+
+.brand-lockup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 0.85rem;
+}
+
+.brand-script {
+  margin: 0;
+  font-family: var(--font-script);
+  font-size: clamp(3.1rem, 8vw, 4.4rem);
+  font-weight: 400;
+  line-height: 0.85;
+  color: var(--navy);
+}
+
+.brand-west {
+  margin: 0.15rem 0 0 0.15rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.42em;
+  color: var(--gold);
+}
+
+.badge {
+  display: inline-block;
+  margin: 0 0 0.65rem;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--navy);
+  background: var(--gold-soft);
+}
+
+.top h1 {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 4vw, 2.35rem);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--navy);
+}
+
+.meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.lede {
+  margin: 1rem 0 0;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-style: italic;
+  line-height: 1.35;
+  color: var(--navy);
+}
+
+.quote {
+  margin: 1.25rem 0 0;
+  padding: 0.9rem 1rem;
+  border-left: 3px solid var(--gold);
+  background: var(--gold-soft);
+}
+
+.quote p { margin: 0; }
+
+.quote cite {
+  display: block;
+  margin-top: 0.35rem;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.facts {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.35rem 0 0;
+}
+
+@media (min-width: 640px) {
+  .facts { grid-template-columns: 1fr 1fr; }
+}
+
+.fact {
+  padding: 0.85rem 0.95rem;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+.fact span {
+  display: block;
+  margin-bottom: 0.15rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.fact strong {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.section-label {
+  margin: 1.8rem 0 0.7rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.session-list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.session-list a {
+  display: grid;
+  gap: 0.2rem;
+  padding: 1rem 1.1rem;
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--navy);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.session-list a:hover {
+  border-color: var(--gold);
+  transform: translateY(-1px);
+}
+
+.session-when {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+p.session-when {
+  margin: 1.1rem 0 0.35rem;
+}
+
+.session-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--navy);
+}
+
+.session-blurb { color: var(--muted); }
+
+.downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 1.15rem 0 0.25rem;
+}
+
+.downloads a {
+  display: inline-block;
+  padding: 0.45rem 0.75rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  background: #fff;
+  border: 1px solid var(--navy);
+}
+
+.downloads a:hover { background: var(--navy-soft); }
+
+.content { font-size: 1.05rem; }
+.content > *:first-child { margin-top: 0; }
+
+.content h2 {
+  margin: 1.75rem 0 0.65rem;
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.content h3 { margin: 1.35rem 0 0.5rem; }
+
+.outline-legend {
+  margin: 1.5rem 0 1.75rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.outline-legend p {
+  margin: 0 0 0.7rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.outline-legend div { display: grid; gap: 0.5rem; }
+
+.content .outline-legend a {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 0.65rem;
+  color: var(--ink);
+  text-decoration: none;
+  background: var(--navy-soft);
+}
+
+.content .outline-legend a:hover { background: color-mix(in srgb, var(--navy-soft) 70%, white); }
+
+.outline-legend a span {
+  flex: none;
+  min-width: 2rem;
+  padding: 0.15rem 0;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  background: var(--navy);
+}
+
+.content .outline-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin: 2.4rem 0 1rem;
+  padding-top: 1.1rem;
+  scroll-margin-top: 1rem;
+  border-top: 2px solid var(--gold-soft);
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--navy);
+}
+
+.outline-marker,
+.outline-letter,
+.outline-numeral {
+  flex: none;
+  font-family: var(--font-body);
+  font-weight: 600;
+  text-align: center;
+}
+
+.outline-marker {
+  min-width: 2.6rem;
+  margin-top: 0.15rem;
+  padding: 0.28rem 0.5rem;
+  font-size: 0.95rem;
+  color: #fff;
+  background: var(--navy);
+}
+
+.content .outline-sub {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  margin: 1.6rem 0 0.7rem;
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.outline-letter {
+  min-width: 1.9rem;
+  padding: 0.18rem 0.4rem;
+  color: var(--navy);
+  background: var(--gold-soft);
+  box-shadow: inset 0 0 0 1px var(--gold);
+}
+
+.content .outline-num {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin: 1.25rem 0 0.45rem;
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+.outline-numeral {
+  min-width: 1.6rem;
+  padding: 0.12rem 0.35rem;
+  color: var(--gold);
+  background: #fff;
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.content p, .content li { color: var(--ink); }
+
+.content a { color: var(--navy); text-underline-offset: 2px; }
+
+.content ul, .content ol { padding-left: 1.25rem; }
+.content li + li { margin-top: 0.35rem; }
+
+.content blockquote {
+  margin: 1.25rem 0;
+  padding: 0.85rem 1rem;
+  border-left: 3px solid var(--gold);
+  background: var(--gold-soft);
+}
+
+.content blockquote p { margin: 0; }
+
+.foot {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.foot a { color: var(--navy); }
+</style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <main class="sheet">
+    
+    <nav class="nav"><a href="../">Conference</a>
+<a href="../gods-mandate/">Nov 21</a>
+<a href="./" class="nav-current">Nov 22</a></nav>
+    <header class="top">
+      <div class="brand-lockup">
+        <p class="brand-script">Simcha</p>
+        <p class="brand-west">WEST</p>
+      </div>
+      <p class="badge">Sunday, November 22, 2026 · 12 Kislev 5787</p>
+      <h1>Atonement from the Jewish Scriptures</h1>
+      <p class="meta">Rabbi Larry Feldman · Pine Summit · Big Bear, CA</p>
+    </header>
+    <div class="downloads"><a href="../downloads/plan-of-atonement.ppt">Download presentation (PowerPoint)</a><a href="../downloads/plan-of-atonement-outline.docx">Download outline (Word)</a></div>
+    <article class="content">
+      <h2>Message Outline</h2>
+<p><em>Presenting the Plan of Atonement from the Jewish Scriptures</em><br><em>“The Jerusalem Road”</em><br>Rabbi Larry Feldman · Sunday, November 22, 2026</p>
+<h3>Introduction</h3>
+<ol>
+<li>The difference between witnessing and apologetics</li>
+<li>The Roman Road for salvation</li>
+</ol>
+<p><strong>Romans 3:23 · Romans 6:23 · Romans 5:8 · Romans 3:24 · Romans 10:9, 10, 14 · Romans 5:1</strong></p>
+<p><strong>Main idea:</strong> God’s plan for atonement can be found in the Jewish Scriptures.</p>
+<nav class="outline-legend" aria-label="Message outline">
+    <p>Jump to a section</p>
+    <div><a href="#outline-i"><span>I</span>The Jewish Bible teaches all have sinned</a><a href="#outline-ii"><span>II</span>The Jewish Bible teaches there are consequences for sin</a><a href="#outline-iii"><span>III</span>The Jewish Bible teaches atonement only comes through sacrifice</a><a href="#outline-iv"><span>IV</span>The Jewish Bible teaches Messiah was the sacrifice</a><a href="#outline-v"><span>V</span>The Jewish Bible teaches we must accept the Messiah</a><a href="#outline-vi"><span>VI</span>The Jewish Bible teaches us to receive Him now</a></div>
+  </nav><h3 id="outline-i" class="outline-point"><span class="outline-marker">I</span><span>The Jewish Bible teaches all have sinned</span></h3>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>The kings of Israel declare this</span></h4>
+<h5 class="outline-num"><span class="outline-numeral">1</span><span>Solomon said it</span></h5>
+<p><strong>2 Chronicles 6:36</strong><br>36 “When they sin against You (for there is no man who does not sin)…”</p>
+<p><strong>Ecclesiastes 7:20</strong><br>20 Indeed, there is not a righteous man on earth who continually does good and who never sins.</p>
+<h5 class="outline-num"><span class="outline-numeral">2</span><span>David said it</span></h5>
+<p><strong>Psalm 14:1–3</strong><br>1 The fool has said in his heart, “There is no god.” They are corrupt, they have committed abominable deeds; there is no one who does good. 2 The L-rd has looked down from heaven upon the sons of men to see if there are any who understand, who seek after G-d. 3 They have all turned aside, together they have become corrupt; there is no one who does good, not even one.</p>
+<h4 class="outline-sub"><span class="outline-letter">B</span><span>The prophets of Israel proclaim this</span></h4>
+<h5 class="outline-num"><span class="outline-numeral">1</span><span>Isaiah said it</span></h5>
+<p><strong>Isaiah 64:6–7</strong><br>6 For all of us have become like one who is unclean, and all our righteous deeds are like a filthy garment; and all of us wither like a leaf, and our iniquities, like the wind, take us away. 7 There is no one who calls on Your name, who arouses himself to take hold of You; for You have hidden Your face from us and have delivered us into the power of our iniquities.</p>
+<h5 class="outline-num"><span class="outline-numeral">2</span><span>Jeremiah said it</span></h5>
+<p><strong>Jeremiah 17:9</strong><br>9 “The heart is more deceitful than all else and is desperately sick; who can understand it?”</p>
+<h3 id="outline-ii" class="outline-point"><span class="outline-marker">II</span><span>The Jewish Bible teaches there are consequences for sin</span></h3>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>Sin causes death</span></h4>
+<p><strong>Ezekiel 18:4, 20</strong><br>4 “Behold, all souls are Mine; the soul of the father as well as the soul of the son is Mine. The soul who sins will die.” 20 “The person who sins will die.”</p>
+<h4 class="outline-sub"><span class="outline-letter">B</span><span>Sin causes separation from G-d</span></h4>
+<p><strong>Isaiah 59:1–2</strong><br>1 Behold, the L-rd’s hand is not so short that it cannot save; nor is His ear so dull that it cannot hear. 2 But your iniquities have made a separation between you and your G-d, and your sins have hidden His face from you so that He does not hear.</p>
+<h3 id="outline-iii" class="outline-point"><span class="outline-marker">III</span><span>The Jewish Bible teaches atonement only comes through sacrifice</span></h3>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>The Jewish concept of atonement</span></h4>
+<h4 class="outline-sub"><span class="outline-letter">B</span><span>It had to be the shedding of blood</span></h4>
+<p><strong>Leviticus 17:11</strong><br>11 “For the life of the flesh is in the blood, and I have given it to you on the altar to make atonement for your souls; for it is the blood by reason of the life that makes atonement.”</p>
+<h3 id="outline-iv" class="outline-point"><span class="outline-marker">IV</span><span>The Jewish Bible teaches Messiah was the sacrifice</span></h3>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>For the Jewish and Gentile people</span></h4>
+<p><strong>Isaiah 49:5–6</strong><br>5 And now says the L-rd, who formed Me from the womb to be His Servant, to bring Jacob back to Him, so that Israel might be gathered to Him (For I am honored in the sight of the L-rd, And My G-d is My strength), 6 He says, “It is too small a thing that You should be My Servant to raise up the tribes of Jacob and to restore the preserved ones of Israel; I will also make You a light of the nations so that My salvation may reach to the end of the earth.”</p>
+<h4 class="outline-sub"><span class="outline-letter">B</span><span>He took our place</span></h4>
+<p><strong>Isaiah 53:3–4</strong><br>3 He was despised and forsaken of men, a man of sorrows and acquainted with grief; and like one from whom men hide their face He was despised, and we did not esteem Him. 4 Surely our griefs He Himself bore, and our sorrows He carried; yet we ourselves esteemed Him stricken, smitten of G-d, and afflicted.</p>
+<p><strong>Isaiah 53:5–6</strong><br>5 But He was pierced through for our transgressions, He was crushed for our iniquities; the chastening for our well-being fell upon Him, and by His scourging we are healed. 6 All of us like sheep have gone astray, each of us has turned to his own way; but the L-rd has caused the iniquity of us all to fall on Him.</p>
+<p><strong>Isaiah 53:7</strong><br>7 He was oppressed and He was afflicted, yet He did not open His mouth; like a lamb that is led to slaughter, and like a sheep that is silent before its shearers, so He did not open His mouth.</p>
+<p><strong>Isaiah 53:8, 10</strong><br>8 By oppression and judgment He was taken away; and as for His generation, who considered that He was cut off out of the land of the living for the transgression of my people, to whom the stroke was due? 10 But the L-rd was pleased to crush Him, putting Him to grief; if He would render Himself as a guilt offering, He will see His offspring, He will prolong His days, and the good pleasure of the L-rd will prosper in His hand.</p>
+<p><strong>Isaiah 53:11–12</strong><br>11 As a result of the anguish of His soul, He will see it and be satisfied; by His knowledge the Righteous One, My Servant, will justify the many, as He will bear their iniquities. 12 Therefore, I will allot Him a portion with the great, and He will divide the booty with the strong; because He poured out Himself to death, and was numbered with the transgressors; yet He Himself bore the sin of many, and interceded for the transgressors.</p>
+<p><strong>Psalm 2:1–3</strong><br>1 Why are the nations in an uproar and the peoples devising a vain thing? 2 The kings of the earth take their stand and the rulers take counsel together against the L-rd and against His Anointed, saying, 3 “Let us tear their fetters apart and cast away their cords from us!”</p>
+<h3 id="outline-v" class="outline-point"><span class="outline-marker">V</span><span>The Jewish Bible teaches we must accept the Messiah</span></h3>
+<p><strong>Psalm 2:4–6</strong><br>4 He who sits in the heavens laughs, the L-rd scoffs at them. 5 Then He will speak to them in His anger and terrify them in His fury, saying, 6 “But as for Me, I have installed My King upon Zion, My holy mountain.”</p>
+<p><strong>Psalm 2:7–9</strong><br>7 “I will surely tell of the decree of the L-rd: He said to Me, ‘You are My Son, today I have begotten You. 8 Ask of Me, and I will surely give the nations as Your inheritance, and the very ends of the earth as Your possession. 9 You shall break them with a rod of iron, You shall shatter them like earthenware.’”</p>
+<p><strong>Psalm 2:10–12</strong><br>10 Now therefore, O kings, show discernment; take warning, O judges of the earth. 11 Worship the L-rd with reverence and rejoice with trembling. 12 Do homage to the Son, that He not become angry, and you perish in the way, for His wrath may soon be kindled. How blessed are all who take refuge in Him!</p>
+<h3 id="outline-vi" class="outline-point"><span class="outline-marker">VI</span><span>The Jewish Bible teaches us to receive Him now</span></h3>
+<p><strong>Isaiah 55:1–2</strong><br>1 “Ho! Every one who thirsts, come to the waters; and you who have no money come, buy and eat. Come, buy wine and milk without money and without cost. 2 Why do you spend money for what is not bread, and your wages for what does not satisfy? Listen carefully to Me, and eat what is good, and delight yourself in abundance.”</p>
+<p><strong>Isaiah 55:3, 6–7</strong><br>3 “Incline your ear and come to Me. Listen, that you may live; and I will make an everlasting covenant with you, according to the faithful mercies shown to David. 6 Seek the L-rd while He may be found; call upon Him while He is near. 7 Let the wicked forsake his way and the unrighteous man his thoughts; and let him return to the L-rd, and He will have compassion on him, and to our G-d, for He will abundantly pardon.”</p>
+<h2>Conclusion</h2>
+<p><strong>Main idea:</strong> God’s plan for forgiveness can be found in the Tanach.</p>
+<h3>Words of Yeshua</h3>
+<p><strong>John 8:24</strong><br>24 “Therefore I said to you that you will die in your sins; for unless you believe that I am He, you will die in your sins.”</p>
+<p><strong>John 6:28–29</strong><br>28 Therefore they said to Him, “What shall we do, so that we may work the works of G-d?” 29 Yeshua answered and said to them, “This is the work of G-d, that you believe in Him whom He has sent.”</p>
+<p><strong>John 1:12</strong><br>12 But as many as received Him, to them He gave the right to become children of G-d, even to those who believe in His name.</p>
+
+    </article>
+    <footer class="foot">
+    <p>Pine Summit · Big Bear, CA · November 20–22, 2026</p>
+    <p>Starts Friday, November 20 at 2:00 PM · Ends Sunday, November 22 at 11:00 AM</p>
+    <p>Questions: Michael Cohen · <a href="tel:+18185216700">(818) 521-6700</a> · <a href="mailto:mcohen@chosenpeople.com">mcohen@chosenpeople.com</a></p>
+    <p><a href="https://chosenpeople.com/event/simcha-west-retreat">Conference details</a></p>
+  </footer>
+  
+  </main>
+</body>
+</html>

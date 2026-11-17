@@ -289,6 +289,9 @@ async function build() {
 
   const qrUrl = await writeQr(config);
 
+  const { buildSimcha } = await import("./build-simcha.js");
+  await buildSimcha();
+
   console.log(`Built ${weeks.length} week(s). Latest: ${latest.date} — ${latest.title}`);
   console.log(`Site:      docs/index.html`);
   console.log(`QR target: ${qrUrl}`);

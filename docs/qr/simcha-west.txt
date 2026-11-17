@@ -1,0 +1,6 @@
+Print simcha-west.png
+
+This QR opens the Simcha West conference site:
+https://dnoff.github.io/Weekly-Message---Shuvah-Yisrael/simcha-west/
+
+It is separate from the weekly Shuvah Yisrael QR (weekly.png).

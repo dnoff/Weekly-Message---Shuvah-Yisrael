@@ -1,0 +1,22 @@
+{
+  "siteName": "Simcha West",
+  "tagline": "Encounter · Equip · Engage",
+  "publicUrl": "https://dnoff.github.io/Weekly-Message---Shuvah-Yisrael/simcha-west/",
+  "dates": "November 20–22, 2026",
+  "schedule": "Starts Friday, November 20 at 2:00 PM · Ends Sunday, November 22 at 11:00 AM",
+  "place": "Pine Summit · Big Bear, CA",
+  "speaker": "Rabbi Larry Feldman",
+  "host": "Chosen People Ministries",
+  "registerUrl": "https://chosenpeople.com/event/simcha-west-retreat",
+  "contactName": "Michael Cohen",
+  "contactPhone": "(818) 521-6700",
+  "contactEmail": "mcohen@chosenpeople.com",
+  "quote": "My heart’s desire and prayer to God for them is for their salvation.",
+  "quoteRef": "Romans 10:1",
+  "qr": {
+    "width": 512,
+    "margin": 2,
+    "dark": "#0c2340",
+    "light": "#ffffff"
+  }
+}
