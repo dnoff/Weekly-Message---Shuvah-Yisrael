@@ -155,7 +155,7 @@ function pageShell({ config, title, bodyHtml }) {
   <title>${escapeHtml(title)} · ${escapeHtml(config.siteName)}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Cormorant+SC:wght@500&family=Great+Vibes&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
   <style>${css}</style>
 </head>
 <body>
@@ -192,7 +192,7 @@ function homeHtml(config, sessions) {
     <header class="top">
       <div class="brand-lockup">
         <p class="brand-script">Simcha</p>
-        <p class="brand-west">WEST</p>
+        <p class="brand-west" aria-label="West"><span aria-hidden="true">west</span></p>
       </div>
       <p class="badge">${escapeHtml(config.tagline)}</p>
       <h1>Session outlines</h1>
@@ -222,7 +222,7 @@ function sessionHtml(config, sessions, session) {
     <header class="top">
       <div class="brand-lockup">
         <p class="brand-script">Simcha</p>
-        <p class="brand-west">WEST</p>
+        <p class="brand-west" aria-label="West"><span aria-hidden="true">west</span></p>
       </div>
       <p class="badge">${escapeHtml(session.when)}</p>
       <h1>${escapeHtml(session.title)}</h1>
