@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Removing Obstacles to Belief in Yeshua as Messiah · Shuvah Yisrael</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <style>:root {
+  --ink: #1a2e28;
+  --muted: #4a5c56;
+  --paper: #f3f6f4;
+  --sheet: #fafcfb;
+  --accent: #0f6b5c;
+  --accent-soft: #d7ebe5;
+  --line: #c9d6d1;
+  --shadow: 0 18px 50px rgba(26, 46, 40, 0.12);
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Source Sans 3", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.55;
+}
+
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 80% 50% at 10% -10%, #cfe8df 0%, transparent 55%),
+    radial-gradient(ellipse 70% 45% at 100% 0%, #d9e4f0 0%, transparent 50%),
+    linear-gradient(165deg, #e8f0ec 0%, #eef2f5 45%, #e6ebe8 100%);
+}
+
+.sheet {
+  width: min(42rem, calc(100% - 2rem));
+  margin: 1.5rem auto 3rem;
+  padding: 1.75rem 1.5rem 2.25rem;
+  background: color-mix(in srgb, var(--sheet) 92%, white);
+  border: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+  box-shadow: var(--shadow);
+  animation: rise 0.55s ease-out both;
+}
+
+@media (min-width: 640px) {
+  .sheet {
+    margin-top: 2.5rem;
+    padding: 2.5rem 2.75rem 3rem;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.top {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.65rem, 4vw, 2.15rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  animation: fade 0.7s ease 0.1s both;
+}
+
+.badge {
+  display: inline-block;
+  margin: 0 0 0.65rem;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-soft);
+  animation: fade 0.7s ease 0.15s both;
+}
+
+.badge-archive {
+  color: var(--muted);
+  background: #e4e9e7;
+}
+
+.top h1 {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 3.2vw, 1.75rem);
+  font-weight: 500;
+  line-height: 1.25;
+  animation: fade 0.7s ease 0.2s both;
+}
+
+.meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  animation: fade 0.7s ease 0.25s both;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.content {
+  font-size: 1.05rem;
+}
+
+.content > *:first-child {
+  margin-top: 0;
+}
+
+.content h2 {
+  margin: 1.75rem 0 0.65rem;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.content h3 {
+  margin: 1.35rem 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.content h4 {
+  margin: 1.35rem 0 0.5rem;
+  font-size: 1rem;
+}
+
+.outline-legend {
+  margin: 1.75rem 0 2rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.outline-legend p {
+  margin: 0 0 0.7rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.outline-legend div {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.content .outline-legend a {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 0.65rem;
+  color: var(--ink);
+  text-decoration: none;
+  background: var(--accent-soft);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.content .outline-legend a:hover {
+  background: color-mix(in srgb, var(--accent-soft) 72%, white);
+  transform: translateX(2px);
+}
+
+.outline-legend a span {
+  flex: none;
+  min-width: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  background: var(--accent);
+}
+
+.content .outline-point {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 2.5rem 0 1rem;
+  padding-top: 1.1rem;
+  scroll-margin-top: 1rem;
+  border-top: 2px solid var(--accent-soft);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.outline-marker {
+  flex: none;
+  min-width: 2.6rem;
+  padding: 0.3rem 0.55rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #fff;
+  background: var(--accent);
+}
+
+.content .outline-sub {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 1.75rem 0 0.75rem;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.outline-letter {
+  flex: none;
+  min-width: 1.9rem;
+  padding: 0.22rem 0.45rem;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--accent);
+  background: var(--accent-soft);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+
+.content p,
+.content li {
+  color: var(--ink);
+}
+
+.content a {
+  color: var(--accent);
+  text-underline-offset: 2px;
+}
+
+.content ul,
+.content ol {
+  padding-left: 1.25rem;
+}
+
+.content li + li {
+  margin-top: 0.35rem;
+}
+
+.content code {
+  font-size: 0.9em;
+  padding: 0.1em 0.35em;
+  background: #e8eeeb;
+}
+
+.content blockquote {
+  margin: 1.25rem 0;
+  padding: 0.85rem 1rem;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+.content blockquote p {
+  margin: 0;
+}
+
+.content a[href*="downloads/"] {
+  font-weight: 600;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-weight: 600;
+}
+
+.nav-top {
+  margin: 0 0 1.25rem;
+  padding: 0 0 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.nav a {
+  color: var(--accent);
+  text-decoration: none;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.nav a:hover {
+  border-color: var(--accent);
+}
+
+.nav a.nav-current {
+  color: var(--ink);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.week-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.week-list li + li {
+  margin-top: 0.75rem;
+}
+
+.week-list a {
+  display: grid;
+  gap: 0.15rem;
+  padding: 1rem 1.1rem;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--line);
+  background: #fff;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.week-list a:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.week-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.week-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.week-date {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+</style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <main class="sheet">
+    <nav class="nav nav-top">
+        <a href="../">This week</a>
+        <a href="./">Past weeks</a>
+      </nav>
+    <header class="top">
+      <p class="brand">Shuvah Yisrael</p>
+      <p class="badge">This week</p>
+      <h1>Removing Obstacles to Belief in Yeshua as Messiah</h1>
+      <p class="meta">James Reppert · Guest Speaker · Week of November 21, 2026 · 11 Kislev 5787</p>
+    </header>
+    <article class="content">
+      <h2>Shabbat at Shuvah Yisrael</h2>
+<p><strong>Parashat Vayetze</strong> · פרשת ויצא<br><strong>Torah:</strong> Genesis 28:10 – 32:3<br><strong>Haftarah:</strong> Hosea 12:13 – 14:10  </p>
+<p><strong>Shabbat Service</strong> — 10:00 AM (PST)<br>Livestream: <a href="https://www.shuvahyisrael.org">www.shuvahyisrael.org</a> · <a href="https://www.youtube.com/@ShuvahYisrael">YouTube</a><br>Email: <a href="mailto:info@shuvahyisrael.org">info@shuvahyisrael.org</a></p>
+<h3>Service Order</h3>
+<ol>
+<li>Songs of Worship  </li>
+<li>Hebrew Liturgy  </li>
+<li>Scripture Reading: Genesis 28:10–15; John 1:51; Romans 10:6–11  </li>
+<li>Announcements &amp; Offering  </li>
+<li>Songs of Worship <em>(Children dismissed for Shabbat School)</em>  </li>
+<li><strong>Message:</strong> Removing Obstacles to Belief in Yeshua as Messiah · James Reppert, Guest Speaker  </li>
+<li>Closing Benediction</li>
+</ol>
+<h3>Word for the Week · מילת השבוע</h3>
+<blockquote>
+<p>Pray like it all depends on God, and work like it all depends on you.<br>— <strong>Philippians 2:12–13</strong></p>
+</blockquote>
+<h3>Reading the Bible Together</h3>
+<p>1 Kings 15 – 21<br>James (Jacob) 1 – 5</p>
+<h3>Upcoming Events</h3>
+<ul>
+<li><strong>Sat, Nov 21</strong> — Hebrew Class, 8:15 AM – 9:15 AM, Building B  </li>
+<li><strong>Sat, Dec 5</strong> — Hanukkah Service 10:00 AM &amp; Livestream Online, Holiday Nosh 8:50 AM  </li>
+<li><strong>Sat, Dec 12</strong> — Hanukkah Catered Luncheon, 12:30 PM – 3:00 PM, Building B (tickets required)  </li>
+<li><strong>Fri, Dec 18</strong> — Shabbat Dinner, 6:00 PM – 8:00 PM</li>
+</ul>
+<h3>Guest speaker materials</h3>
+<p>James E. Reppert, Th.M. · Messianic Hope, Inc.</p>
+<ul>
+<li><a href="https://dnoff.github.io/Weekly-Message---Shuvah-Yisrael/downloads/removing-obstacles.pptx">Download presentation (PowerPoint)</a>  </li>
+<li>Further study: <a href="https://Turn2Moshiach.org">Turn2Moshiach.org</a> · <a href="https://MessianicGO.org">MessianicGO.org</a></li>
+</ul>
+<hr>
+<h2>Message Outline</h2>
+<p><em>Removing Obstacles to Belief in Yeshua as Messiah</em><br><em>Three Misconceptions · Three Objections · Five Signposts</em><br>James E. Reppert, Th.M. · Messianic Hope, Inc. · November 21, 2026</p>
+<p><strong>Main Idea:</strong> Believing in Yeshua is not a departure from Jewish hope but its fulfillment, and nothing about it asks a Jewish person to stop being Jewish.</p>
+<h3>Introduction — The underlying concerns</h3>
+<p>Beneath the wariness is a question rarely spoken aloud: “Am I allowed? Can I look into this and still be Jewish?”</p>
+<p>Two barriers: belief in Yeshua feels foreign to Jewish life, and even being open to it feels like denying your heritage.</p>
+<p>No pressure. Hard questions welcome, as they have been since Abraham. Every Scripture quoted today is from the Tanakh.</p>
+<h3>Our roadmap</h3>
+<ol>
+<li>What Messianic Judaism is not: three misconceptions  </li>
+<li>Why Jewish people hesitate: three objections  </li>
+<li>What Jewish fulfillment looks like: five signposts</li>
+</ol>
+<p>Whatever you decide, hear all three steps first.</p>
+<nav class="outline-legend" aria-label="Message outline">
+    <p>Jump to a section</p>
+    <div><a href="#outline-i"><span>I</span>Three misconceptions — What Messianic Judaism is not</a><a href="#outline-ii"><span>II</span>Three objections — Why Jewish people hesitate</a><a href="#outline-iii"><span>III</span>Jewish fulfillment — Five signposts</a></div>
+  </nav><h3 id="outline-i" class="outline-point"><span class="outline-marker">I</span><span>Three misconceptions — What Messianic Judaism is not</span></h3>
+<p>Some of what is said about us, we have earned. Most of it is simply mistaken.</p>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>Not Christianity with a Jewish veneer</span></h4>
+<p>Persecution in the name of Jesus is real history, and if you flinch at that name, you have reasons. But those who did it were not following Yeshua.</p>
+<p>He was born in Bethlehem, lived under the Torah, and taught in Galilee’s synagogues. His first followers were all Jewish.</p>
+<p>Messianic believers are Jewish and Gentile in the original Jewish movement around Yeshua, still alive today.</p>
+<h4 class="outline-sub"><span class="outline-letter">B</span><span>Not a trick to get Jewish people into church</span></h4>
+<p>Some groups have used Jewish symbols as bait. If you have experienced that, your anger is justified, and we share it.</p>
+<p>Shabbat, Passover and Hebrew are not marketing. They are Israel’s appointed times, and the Messiah is Jewish.</p>
+<p><strong>Three promises:</strong></p>
+<ol>
+<li>We will tell you who we are up front.  </li>
+<li>We will never ask you to give up being Jewish.  </li>
+<li>We welcome your hardest questions.</li>
+</ol>
+<p>No disguise, no hidden agenda, and no bait-and-switch. If a faith is true, it can stand up to them.</p>
+<h4 class="outline-sub"><span class="outline-letter">C</span><span>Not a way of leaving the Jewish people or the Torah</span></h4>
+<p><strong>Identity:</strong> a Jewish person by birth does not stop being Jewish by changing beliefs. Israel’s permanence rests on God’s faithfulness, not ours.</p>
+<p><strong>Torah:</strong> the renewed covenant is made with Israel, with Torah written on the heart. It does not throw Torah away.</p>
+<p><strong>Jeremiah 31:36</strong><br>36 “If this fixed order departs from before Me,” declares the LORD, “Then the offspring of Israel also will cease from being a nation before Me forever.”</p>
+<p><strong>Jeremiah 31:31, 33</strong><br>31 “Behold, days are coming,” declares the LORD, “when I will make a new covenant with the house of Israel and with the house of Judah. … 33 But this is the covenant which I will make with the house of Israel after those days,” declares the LORD, “I will put My law within them and on their heart I will write it; and I will be their God, and they shall be My people.”</p>
+<h3 id="outline-ii" class="outline-point"><span class="outline-marker">II</span><span>Three objections — Why Jewish people hesitate</span></h3>
+<p>Serious and sincere reasons, held for two thousand years. Three honest objections, answered directly.</p>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>“Yeshua did not fulfill the messianic prophecies.”</span></h4>
+<p>I agree that the age of peace has not come (Isaiah 2:4).</p>
+<p>But the prophets paint two portraits of one Messiah: the humble king (Zechariah 9:9–10) and the suffering servant (Isaiah 53).</p>
+<p>He comes first to suffer and returns to reign. The age of peace is delayed, not cancelled.</p>
+<p><strong>Zechariah 9:9</strong><br>9 Rejoice greatly, O daughter of Zion! Shout in triumph, O daughter of Jerusalem! Behold, your king is coming to you; He is just and endowed with salvation, humble, and mounted on a donkey, even on a colt, the foal of a donkey.</p>
+<h4 class="outline-sub"><span class="outline-letter">B</span><span>“Believing in His divinity breaks Jewish monotheism.”</span></h4>
+<p>We say the Shema too. We do not believe in three gods, or that a man became a second god.</p>
+<p><em>Echad</em>, “one,” is also the word for husband and wife becoming “one flesh” (Genesis 2:24).</p>
+<p>The Tanakh itself shows a unity with depth: the LORD appears to Abraham at Mamre in human form (Genesis 18:1–2).</p>
+<p><strong>Deuteronomy 6:4</strong><br>4 Hear, O Israel! The LORD is our God, the LORD is one.</p>
+<p><strong>Micah 5:2</strong><br>2 But as for you, Bethlehem Ephrathah, too little to be among the clans of Judah, from you One will go forth for Me to be ruler in Israel. His goings forth are from long ago, from the days of eternity.</p>
+<p><strong>Zechariah 12:10</strong><br>10 I will pour out on the house of David and on the inhabitants of Jerusalem, the Spirit of grace and of supplication, so that they will look on Me whom they have pierced; and they will mourn for Him, as one mourns for an only son, and they will weep bitterly over Him like the bitter weeping over a firstborn.</p>
+<h4 class="outline-sub"><span class="outline-letter">C</span><span>“My rabbis and my people have said no.”</span></h4>
+<p><strong>The rabbis:</strong> their writings preserve much that is wise, but the Tanakh is the standard that tests every interpretation, mine included (Deuteronomy 4:2; Nehemiah 8).</p>
+<p><strong>The people:</strong> the majority of Israel is not the measure of truth. Think of Elijah and the seven thousand, Jeremiah in the cistern, and the thousands in Jerusalem who believed (1 Kings 19; Jeremiah 38; Acts 2).</p>
+<p><strong>Isaiah 53:1</strong><br>1 Who has believed our message? And to whom has the arm of the LORD been revealed?</p>
+<h3 id="outline-iii" class="outline-point"><span class="outline-marker">III</span><span>Jewish fulfillment — Five signposts</span></h3>
+<p>The need, the provision, the place and the time, the covenant, and the day. At each one, ask yourself: who fits?</p>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>The need</span></h4>
+<p>Atonement costs a life: blood on the doorposts at the first Passover, a substitute on Mount Moriah.</p>
+<p>Since the year 70, there has been no altar. Hosea’s prayer asks, “Take away all iniquity.” So, <strong>who pays?</strong></p>
+<p><strong>Leviticus 17:11</strong><br>11 For the life of the flesh is in the blood, and I have given it to you on the altar to make atonement for your souls; for it is the blood by reason of the life that makes atonement.</p>
+<p><strong>Genesis 22:8</strong><br>8 “God will provide for Himself the lamb for the burnt offering, my son.”</p>
+<p><strong>Hosea 14:2</strong><br>2 Take words with you and return to the LORD. Say to Him, “Take away all iniquity and receive us graciously, that we may present the fruit of our lips.”</p>
+<h4 class="outline-sub"><span class="outline-letter">B</span><span>The provision</span></h4>
+<p>Isaiah 53 — a chapter that Jewish and Christian translations render in much the same way.</p>
+<p>Substitution, a lamb, and an <em>asham</em>, the guilt offering of the Torah. He dies, and He lives.</p>
+<p>Leviticus says atonement requires a life given. Isaiah describes a servant whose life is given for many. <strong>Who fits?</strong></p>
+<p><strong>Isaiah 53:4–5</strong><br>4 Surely our griefs He Himself bore, and our sorrows He carried; yet we ourselves esteemed Him stricken, smitten of God, and afflicted. 5 But He was pierced through for our transgressions, He was crushed for our iniquities; the chastening for our well-being fell upon Him, and by His scourging we are healed.</p>
+<p><strong>Isaiah 53:6</strong><br>6 All of us like sheep have gone astray, each of us has turned to his own way; but the LORD has caused the iniquity of us all to fall on Him.</p>
+<p><strong>Isaiah 53:7</strong><br>7 He was oppressed and He was afflicted, yet He did not open His mouth; like a lamb that is led to slaughter, and like a sheep that is silent before its shearers, so He did not open His mouth.</p>
+<p><strong>Isaiah 53:8</strong><br>8 By oppression and judgment He was taken away; and as for His generation, who considered that He was cut off out of the land of the living for the transgression of my people, to whom the stroke was due?</p>
+<p><strong>Isaiah 53:10</strong><br>10 But the LORD was pleased to crush Him, putting Him to grief; if He would render Himself as a guilt offering, He will see His offspring, He will prolong His days, and the good pleasure of the LORD will prosper in His hand.</p>
+<h4 class="outline-sub"><span class="outline-letter">C</span><span>The place and the time</span></h4>
+<p><strong>The place:</strong> Bethlehem Ephrathah (Micah 5:2).</p>
+<p><strong>The time:</strong> the Messiah is cut off before the city and the sanctuary are destroyed in the year 70.</p>
+<p>Daniel’s chronology is debated, and I invite you to study it for yourself.</p>
+<p><strong>Daniel 9:26</strong><br>26 Then after the sixty-two weeks the Messiah will be cut off and have nothing, and the people of the prince who is to come will destroy the city and the sanctuary. …</p>
+<h4 class="outline-sub"><span class="outline-letter">D</span><span>The covenant</span></h4>
+<p>The renewed covenant, promised to the house of Israel: Torah on the heart, a people who all know the LORD, and sin remembered no more.</p>
+<p>Yeshua spoke of this covenant at His last Passover seder (Luke 22:20).</p>
+<p><strong>Jeremiah 31:34</strong><br>34 …“for they will all know Me, from the least of them to the greatest of them,” declares the LORD, “for I will forgive their iniquity, and their sin I will remember no more.”</p>
+<h4 class="outline-sub"><span class="outline-letter">E</span><span>The day</span></h4>
+<p>A day is coming when Israel will look on the one they pierced, and mourn (Zechariah 12:10).</p>
+<p>Joseph’s brothers did not recognize him the first time. They did the second time, and with tears.</p>
+<p>Will you recognize Him now, or only then?</p>
+<p><strong>Genesis 45:3–4</strong><br>3 Then Joseph said to his brothers, “I am Joseph! Is my father still alive?” But his brothers could not answer him, for they were dismayed at his presence. … 4 “I am your brother Joseph, whom you sold into Egypt.”</p>
+<h3>Invitation — Accepting Yeshua as Messiah</h3>
+<p>This week, read Isaiah 52:13–53:12 slowly, in a Jewish translation.</p>
+<p>Then ask: “God, if Yeshua is the Messiah of Israel, show me.”</p>
+<p>It commits you to nothing. You can keep asking questions and keep your heritage while you search.</p>
+<p>If it were true, wouldn’t you want to know?</p>
+<p><strong>Main Idea again:</strong> Believing in Yeshua is not a departure from Jewish hope but its fulfillment, and nothing about it asks a Jewish person to stop being Jewish.</p>
+<hr>
+<h3>Welcome · ברוך הבא</h3>
+<p>If you are new to Shuvah Yisrael, we welcome you. Please ask one of the leaders after service, or contact us at <a href="mailto:info@shuvahyisrael.org">info@shuvahyisrael.org</a>.</p>
+<p><em>Guest speaker: James E. Reppert, Th.M. · Messianic Hope, Inc.</em><br><em>Messianic Rabbi: Larry Feldman</em></p>
+
+    </article>
+  </main>
+</body>
+</html>
