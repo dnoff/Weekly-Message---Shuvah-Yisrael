@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thanksgiving — “An Unfair Exchange” · Shuvah Yisrael</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <style>:root {
+  --ink: #1a2e28;
+  --muted: #4a5c56;
+  --paper: #f3f6f4;
+  --sheet: #fafcfb;
+  --accent: #0f6b5c;
+  --accent-soft: #d7ebe5;
+  --line: #c9d6d1;
+  --shadow: 0 18px 50px rgba(26, 46, 40, 0.12);
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Source Sans 3", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.55;
+}
+
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 80% 50% at 10% -10%, #cfe8df 0%, transparent 55%),
+    radial-gradient(ellipse 70% 45% at 100% 0%, #d9e4f0 0%, transparent 50%),
+    linear-gradient(165deg, #e8f0ec 0%, #eef2f5 45%, #e6ebe8 100%);
+}
+
+.sheet {
+  width: min(42rem, calc(100% - 2rem));
+  margin: 1.5rem auto 3rem;
+  padding: 1.75rem 1.5rem 2.25rem;
+  background: color-mix(in srgb, var(--sheet) 92%, white);
+  border: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+  box-shadow: var(--shadow);
+  animation: rise 0.55s ease-out both;
+}
+
+@media (min-width: 640px) {
+  .sheet {
+    margin-top: 2.5rem;
+    padding: 2.5rem 2.75rem 3rem;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.top {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.65rem, 4vw, 2.15rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  animation: fade 0.7s ease 0.1s both;
+}
+
+.badge {
+  display: inline-block;
+  margin: 0 0 0.65rem;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-soft);
+  animation: fade 0.7s ease 0.15s both;
+}
+
+.badge-archive {
+  color: var(--muted);
+  background: #e4e9e7;
+}
+
+.top h1 {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 3.2vw, 1.75rem);
+  font-weight: 500;
+  line-height: 1.25;
+  animation: fade 0.7s ease 0.2s both;
+}
+
+.meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  animation: fade 0.7s ease 0.25s both;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.content {
+  font-size: 1.05rem;
+}
+
+.content > *:first-child {
+  margin-top: 0;
+}
+
+.content h2 {
+  margin: 1.75rem 0 0.65rem;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.content h3 {
+  margin: 1.35rem 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.content h4 {
+  margin: 1.35rem 0 0.5rem;
+  font-size: 1rem;
+}
+
+.outline-legend {
+  margin: 1.75rem 0 2rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.outline-legend p {
+  margin: 0 0 0.7rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.outline-legend div {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.content .outline-legend a {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 0.65rem;
+  color: var(--ink);
+  text-decoration: none;
+  background: var(--accent-soft);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.content .outline-legend a:hover {
+  background: color-mix(in srgb, var(--accent-soft) 72%, white);
+  transform: translateX(2px);
+}
+
+.outline-legend a span {
+  flex: none;
+  min-width: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  background: var(--accent);
+}
+
+.content .outline-point {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 2.5rem 0 1rem;
+  padding-top: 1.1rem;
+  scroll-margin-top: 1rem;
+  border-top: 2px solid var(--accent-soft);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.outline-marker {
+  flex: none;
+  min-width: 2.6rem;
+  padding: 0.3rem 0.55rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #fff;
+  background: var(--accent);
+}
+
+.content .outline-sub {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 1.75rem 0 0.75rem;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.outline-letter {
+  flex: none;
+  min-width: 1.9rem;
+  padding: 0.22rem 0.45rem;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--accent);
+  background: var(--accent-soft);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+
+.content p,
+.content li {
+  color: var(--ink);
+}
+
+.content a {
+  color: var(--accent);
+  text-underline-offset: 2px;
+}
+
+.content ul,
+.content ol {
+  padding-left: 1.25rem;
+}
+
+.content li + li {
+  margin-top: 0.35rem;
+}
+
+.content code {
+  font-size: 0.9em;
+  padding: 0.1em 0.35em;
+  background: #e8eeeb;
+}
+
+.content blockquote {
+  margin: 1.25rem 0;
+  padding: 0.85rem 1rem;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+.content blockquote p {
+  margin: 0;
+}
+
+.content a[href*="downloads/"] {
+  font-weight: 600;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-weight: 600;
+}
+
+.nav-top {
+  margin: 0 0 1.25rem;
+  padding: 0 0 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.nav a {
+  color: var(--accent);
+  text-decoration: none;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.nav a:hover {
+  border-color: var(--accent);
+}
+
+.nav a.nav-current {
+  color: var(--ink);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.week-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.week-list li + li {
+  margin-top: 0.75rem;
+}
+
+.week-list a {
+  display: grid;
+  gap: 0.15rem;
+  padding: 1rem 1.1rem;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--line);
+  background: #fff;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.week-list a:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.week-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.week-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.week-date {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+</style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <main class="sheet">
+    <nav class="nav nav-top">
+        <a href="../">This week</a>
+        <a href="./">Past weeks</a>
+      </nav>
+    <header class="top">
+      <p class="brand">Shuvah Yisrael</p>
+      <p class="badge">This week</p>
+      <h1>Thanksgiving — “An Unfair Exchange”</h1>
+      <p class="meta">Rabbi Larry Feldman · Week of November 28, 2026 · 18 Kislev 5787</p>
+    </header>
+    <article class="content">
+      <h2>Shabbat at Shuvah Yisrael</h2>
+<p><strong>Parashat Vayishlach</strong> · פרשת וישלח<br><strong>Torah:</strong> Genesis 32:4 – 36:43<br><strong>Haftarah:</strong> Obadiah 1:1–21  </p>
+<p><strong>Shabbat Service</strong> — 10:00 AM (PST)<br>Livestream: <a href="https://www.shuvahyisrael.org">www.shuvahyisrael.org</a> · <a href="https://www.youtube.com/@ShuvahYisrael">YouTube</a><br>Email: <a href="mailto:info@shuvahyisrael.org">info@shuvahyisrael.org</a></p>
+<h3>Service Order</h3>
+<ol>
+<li>Songs of Worship  </li>
+<li>Hebrew Liturgy  </li>
+<li>Scripture Reading: Genesis 32:9–12 and Yaakov (James) 1:1–8  </li>
+<li>Announcements &amp; Offering  </li>
+<li>Songs of Worship <em>(Children dismissed for Shabbat School)</em>  </li>
+<li><strong>Message:</strong> Thanksgiving — “An Unfair Exchange” · Rabbi Larry Feldman  </li>
+<li>Closing Benediction</li>
+</ol>
+<h3>Word for the Week · מילת השבוע</h3>
+<blockquote>
+<p>“Enter His gates with Thanksgiving, and His courts with praise, give thanks to Him; bless His name.”<br>— <strong>Psalm 100:4</strong></p>
+</blockquote>
+<h3>Reading the Bible Together</h3>
+<p>1 Kings 22 and 2 Kings 1 – 6</p>
+<hr>
+<h2>Message Outline</h2>
+<p><em>Thanksgiving — “An Unfair Exchange”</em><br>Rabbi Larry Feldman · November 28, 2026 · 18 Kislev 5787</p>
+<p><strong>Main Idea:</strong> We need to <strong>remember</strong> and <strong>thank</strong> God for the blessings He gives us.</p>
+<h3>Opening Scriptures</h3>
+<p><strong>Deuteronomy 8:6–19</strong><br>6 “Therefore, you shall keep the commandments of the Lord your God, to walk in His ways and to fear Him. 7 For the Lord your God is bringing you into a good land, a land of brooks of water, of fountains and springs, flowing forth in valleys and hills; 8 a land of wheat and barley, of vines and fig trees and pomegranates, a land of olive oil and honey; 9 a land where you will eat food without scarcity, in which you will not lack anything; a land whose stones are iron, and out of whose hills you can dig copper. 10 When you have eaten and are satisfied, you shall bless the Lord your God for the good land which He has given you. 11 Beware that you do not forget the Lord your God by not keeping His commandments and His ordinances and His statutes which I am commanding you today; 12 otherwise, when you have eaten and are satisfied, and have built good houses and lived in them, 13 and when your herds and your flocks multiply, and your silver and gold multiply, and all that you have multiplies, 14 then your heart will become proud and you will forget the Lord your God who brought you out from the land of Egypt, out of the house of slavery. 15 He led you through the great and terrible wilderness, with its fiery serpents and scorpions and thirsty ground where there was no water; He brought water for you out of the rock of flint. 16 In the wilderness He fed you manna which your fathers did not know, that He might humble you and that He might test you, to do good for you in the end. 17 Otherwise, you may say in your heart, ‘My power and the strength of my hand made me this wealth.’ 18 But you shall remember the Lord your God, for it is He who is giving you power to make wealth, that He may confirm His covenant which He swore to your fathers, as it is this day. 19 It shall come about if you ever forget the Lord your God and go after other gods and serve them and worship them, I testify against you today that you will surely perish.”</p>
+<p><strong>Luke 17:11–19</strong><br>11 While He was on the way to Jerusalem, He was passing between Samaria and Galilee. 12 As He entered a village, ten leprous men who stood at a distance met Him; 13 and they raised their voices, saying, “Yeshua, Master, have mercy on us!” 14 When He saw them, He said to them, “Go and show yourselves to the priests.” And as they were going, they were cleansed. 15 Now one of them, when he saw that he had been healed, turned back, glorifying God with a loud voice, 16 and he fell on his face at His feet, giving thanks to Him. And he was a Samaritan. 17 Then Yeshua answered and said, “Were there not ten cleansed? But the nine, where are they? 18 Was no one found who returned to give glory to God, except this foreigner?” 19 And He said to him, “Stand up and go; your faith has made you well.”</p>
+<p><strong>Psalm 116:1–9, 12</strong><br>1 I love the Lord, because He hears my voice and my supplications. 2 Because He has inclined His ear to me, therefore I shall call upon Him as long as I live. 3 The cords of death encompassed me and the terrors of Sheol came upon me; I found distress and sorrow. 4 Then I called upon the name of the Lord: “O Lord, I beseech You, save my life!” 5 Gracious is the Lord, and righteous; yes, our God is compassionate. 6 The Lord preserves the simple; I was brought low, and He saved me. 7 Return to your rest, O my soul, for the Lord has dealt bountifully with you. 8 For You have rescued my soul from death, my eyes from tears, my feet from stumbling. 9 I shall walk before the Lord in the land of the living. 12 What shall I render to the Lord for all His benefits toward me?</p>
+<blockquote>
+<p>We need to <strong>remember</strong> and <strong>thank</strong> God for the <strong>blessings</strong> He gives us.</p>
+</blockquote>
+<nav class="outline-legend" aria-label="Message outline">
+    <p>Jump to a section</p>
+    <div><a href="#outline-i"><span>I</span>We should thank God for the <strong>gift</strong> of <strong>salvation</strong></a><a href="#outline-ii"><span>II</span>We should thank God for the <strong>opportunity</strong> for <strong>service</strong></a><a href="#outline-iii"><span>III</span>We should thank God for the <strong>vision</strong> of <strong>Shuvah Yisrael</strong></a><a href="#outline-iv"><span>IV</span>We should thank God for the <strong>blessings</strong> of <strong>life</strong></a></div>
+  </nav><h3 id="outline-i" class="outline-point"><span class="outline-marker">I</span><span>We should thank God for the <strong>gift</strong> of <strong>salvation</strong></span></h3>
+<h4 class="outline-sub"><span class="outline-letter">A</span><span>We were <strong>lost</strong></span></h4>
+<p><strong>Ephesians 2:1–3</strong><br>1 And you were dead in your trespasses and sins, 2 in which you formerly walked according to the course of this world, according to the prince of the power of the air, of the spirit that is now working in the sons of disobedience. 3 Among them we too all formerly lived in the lusts of our flesh, indulging the desires of the flesh and of the mind, and were by nature children of wrath, even as the rest.</p>
+<p><strong>Psalm 14:1–3</strong><br>1 The fool has said in his heart, “There is no God.” They are corrupt, they have committed abominable deeds. There is no one who does good. 2 The Lord has looked down from heaven upon the sons of men to see if there are any who understand. 3 They have all turned aside, together they have become corrupt; there is no one who does good, not even one.</p>
+<p><strong>Romans 3:10–18</strong><br>10 as it is written, “THERE IS NONE RIGHTEOUS, NOT EVEN ONE; 11 THERE IS NONE WHO UNDERSTANDS, THERE IS NONE WHO SEEKS FOR GOD; 12 ALL HAVE TURNED ASIDE, TOGETHER THEY HAVE BECOME USELESS; THERE IS NONE WHO DOES GOOD, THERE IS NOT EVEN ONE.” 13 “THEIR THROAT IS AN OPEN GRAVE, WITH THEIR TONGUES THEY KEEP DECEIVING,” “THE POISON OF ASPS IS UNDER THEIR LIPS”; 14 “WHOSE MOUTH IS FULL OF CURSING AND BITTERNESS”; 15 “THEIR FEET ARE SWIFT TO SHED BLOOD, 16 DESTRUCTION AND MISERY ARE IN THEIR PATHS, 17 AND THE PATH OF PEACE THEY HAVE NOT KNOWN.” 18 “THERE IS NO FEAR OF GOD BEFORE THEIR EYES.”</p>
+<h4 class="outline-sub"><span class="outline-letter">B</span><span>He <strong>found</strong> us</span></h4>
+<p><strong>Ephesians 2:4–6</strong><br>4 But God, being rich in mercy, because of His great love with which He loved us, 5 even when we were dead in our transgressions, made us alive together with Messiah (by grace you have been saved), 6 and raised us up with Him, and seated us with Him in the heavenly places in Messiah Yeshua,</p>
+<p><strong>Ephesians 2:8–9</strong><br>8 For by grace you have been saved through faith; and that not of yourselves, it is the gift of God; 9 not as a result of works, so that no one may boast.</p>
+<h4 class="outline-sub"><span class="outline-letter">C</span><span>We have a <strong>relationship</strong> with Him</span></h4>
+<ul>
+<li>Opportunity to read from Him  </li>
+<li>Privilege of prayer with Him  </li>
+<li>Chance to share Him  </li>
+<li>Blessings of giving to Him  </li>
+<li>Joy of doing for Him</li>
+</ul>
+<h3 id="outline-ii" class="outline-point"><span class="outline-marker">II</span><span>We should thank God for the <strong>opportunity</strong> for <strong>service</strong></span></h3>
+<p><strong>Luke 17:7–10</strong><br>7 “Which of you, having a slave plowing or tending sheep, will say to him when he has come in from the field, ‘Come immediately and sit down to eat’? 8 But will he not say to him, ‘Prepare something for me to eat, and properly clothe yourself and serve me while I eat and drink; and afterward you may eat and drink’? 9 He does not thank the slave because he did the things which were commanded, does he? 10 So you too, when you do all the things which are commanded you, say, ‘We are unworthy slaves; we have done only that which we ought to have done.’”</p>
+<p><strong>Titus 3:8</strong><br>8 This is a trustworthy statement; and concerning these things I want you to speak confidently, so that those who have believed God will be careful to engage in good deeds. These things are good and profitable for men.</p>
+<p><strong>Daniel 4:31–37</strong><br>31 “While the word was in the king’s mouth, a voice came from heaven, saying, ‘King Nebuchadnezzar, to you it is declared: sovereignty has been removed from you, 32 and you will be driven away from mankind, and your dwelling place will be with the beasts of the field. You will be given grass to eat like cattle, and seven periods of time will pass over you until you recognize that the Most High is ruler over the realm of mankind and bestows it on whomever He wishes.’” 33 Immediately the word concerning Nebuchadnezzar was fulfilled; and he was driven away from mankind and began eating grass like cattle, and his body was drenched with the dew of heaven until his hair had grown like eagles’ feathers and his nails like birds’ claws. 34 “But at the end of that period, I, Nebuchadnezzar, raised my eyes toward heaven and my reason returned to me, and I blessed the Most High and praised and honored Him who lives forever; for His dominion is an everlasting dominion, and His kingdom endures from generation to generation. 35 All the inhabitants of the earth are accounted as nothing, but He does according to His will in the host of heaven and among the inhabitants of earth; and no one can ward off His hand or say to Him, ‘What have You done?’ 36 At that time my reason returned to me and my majesty and splendor were restored to me for the glory of my kingdom, and my counselors and my nobles began seeking me out; so I was reestablished in my sovereignty, and surpassing greatness was added to me. 37 Now I, Nebuchadnezzar, praise, exalt and honor the King of heaven, for all His works are true and His ways just, and He is able to humble those who walk in pride.”</p>
+<p><strong>Daniel 5:18–22</strong><br>18 “O king, the Most High God granted sovereignty, grandeur, glory and majesty to Nebuchadnezzar your father. 19 Because of the grandeur which He bestowed on him, all the peoples, nations and men of every language feared and trembled before him; whomever he wished he killed and whomever he wished he spared alive; and whomever he wished he elevated and whomever he wished he humbled. 20 But when his heart was lifted up and his spirit became so proud that he behaved arrogantly, he was deposed from his royal throne and his glory was taken away from him. 21 He was also driven away from mankind, and his heart was made like that of beasts, and his dwelling place was with the wild donkeys. He was given grass to eat like cattle, and his body was drenched with the dew of heaven until he recognized that the Most High God is ruler over the realm of mankind and that He sets over it whomever He wishes. 22 Yet you, his son, Belshazzar, have not humbled your heart, even though you knew all this,”</p>
+<h3 id="outline-iii" class="outline-point"><span class="outline-marker">III</span><span>We should thank God for the <strong>vision</strong> of <strong>Shuvah Yisrael</strong></span></h3>
+<h3 id="outline-iv" class="outline-point"><span class="outline-marker">IV</span><span>We should thank God for the <strong>blessings</strong> of <strong>life</strong></span></h3>
+<p><strong>Romans 12:1–2</strong><br>1 Therefore I urge you, brethren, by the mercies of God, to present your bodies a living and holy sacrifice, acceptable to God, which is your spiritual service of worship. 2 And do not be conformed to this world, but be transformed by the renewing of your mind, so that you may prove what the will of God is, that which is good and acceptable and perfect.</p>
+<p><strong>Psalm 116:12–14</strong><br>12 What shall I render to the Lord for all His benefits toward me? 13 I shall lift up the cup of salvation and call upon the name of the Lord. 14 I shall pay my vows to the Lord, oh may it be in the presence of all His people.</p>
+<h3>Conclusion</h3>
+<p>Happy Thanksgiving!</p>
+<hr>
+<h3>Welcome · ברוך הבא</h3>
+<p>If you are new to Shuvah Yisrael, we welcome you. Please ask one of the leaders after service, or contact us at <a href="mailto:info@shuvahyisrael.org">info@shuvahyisrael.org</a>.</p>
+<p><em>Messianic Rabbi: Larry Feldman</em></p>
+
+    </article>
+  </main>
+</body>
+</html>
